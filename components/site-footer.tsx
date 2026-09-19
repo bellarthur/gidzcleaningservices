@@ -10,7 +10,7 @@ export function SiteFooter() {
           <div>
             <div className="flex items-center gap-2 mb-3">
               <Sparkles className="h-5 w-5 text-accent" />
-              <span className="text-xl font-bold text-primary">Tidy Bunny</span>
+              <span className="text-xl font-bold text-primary">Gidz Cleaning Services</span>
             </div>
             <p className="text-sm text-foreground/70">
               Premium cleaning for homes, hotels, and short-stays in Kumasi.
@@ -75,7 +75,7 @@ export function SiteFooter() {
         </div>
 
         <div className="border-t border-border pt-8 text-center text-sm text-foreground/70">
-          <p>© {new Date().getFullYear()} Tidy Bunny Cleaning Service. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Gidz Cleaning Services. All rights reserved.</p>
         </div>
       </div>
     </footer>

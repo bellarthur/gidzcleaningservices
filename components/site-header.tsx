@@ -40,7 +40,7 @@ export function SiteHeader({ onQuoteClick }: SiteHeaderProps) {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
             <Sparkles className="h-6 w-6 text-accent" />
-            <span className="text-2xl font-bold text-primary">Tidy Bunny</span>
+            <span className="text-2xl font-bold text-primary">Gidz Cleaning Services</span>
           </Link>
 
           {/* Desktop Nav */}

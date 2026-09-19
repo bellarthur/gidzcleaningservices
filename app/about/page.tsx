@@ -19,8 +19,8 @@ export default function AboutPage() {
     <div className="min-h-screen bg-background text-foreground">
       {/* HERO */}
       <Hero
-        headline="The Story Behind Tidy Bunny"
-        subheading="We believe your home should feel like a sanctuary. That's why we started Tidy Bunny—to bring joy, precision, and trust to cleaning."
+        headline="The Story Behind Gidz Cleaning Services"
+        subheading="We believe your home should feel like a sanctuary. That's why we started Gidz Cleaning Services—to bring joy, precision, and trust to cleaning."
       />
 
       {/* BRAND VALUES */}
@@ -68,11 +68,11 @@ export default function AboutPage() {
       {/* STORY */}
       <Section>
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-4xl font-bold text-primary mb-8 text-center">Why We Started Tidy Bunny</h2>
+          <h2 className="text-4xl font-bold text-primary mb-8 text-center">Why We Started Gidz Cleaning Services</h2>
 
           <div className="space-y-6 text-foreground/80 leading-relaxed">
             <motion.p {...fadeInUp}>
-              Tidy Bunny was born from a simple observation: <strong>people are busy</strong>. Busy with work, family, guests, bookings—and somewhere in the middle, their homes get neglected.
+              Gidz Cleaning Services was born from a simple observation: <strong>people are busy</strong>. Busy with work, family, guests, bookings—and somewhere in the middle, their homes get neglected.
             </motion.p>
 
             <motion.p {...fadeInUp}>
@@ -80,11 +80,11 @@ export default function AboutPage() {
             </motion.p>
 
             <motion.p {...fadeInUp}>
-              So we created Tidy Bunny to deliver exactly what busy people need: <strong>reliable, professional, joyful cleaning</strong>. A service that respects your time, your home, and your peace of mind.
+              So we created Gidz Cleaning Services to deliver exactly what busy people need: <strong>reliable, professional, joyful cleaning</strong>. A service that respects your time, your home, and your peace of mind.
             </motion.p>
 
             <motion.p {...fadeInUp}>
-              Whether you're a busy professional wanting to come home to a sparkling sanctuary, or a host managing multiple short-stay properties, Tidy Bunny is here to handle the cleaning so you can focus on what matters.
+              Whether you're a busy professional wanting to come home to a sparkling sanctuary, or a host managing multiple short-stay properties, Gidz Cleaning Services is here to handle the cleaning so you can focus on what matters.
             </motion.p>
           </div>
         </div>
@@ -92,7 +92,7 @@ export default function AboutPage() {
 
       {/* THE STANDARD */}
       <Section className="bg-secondary/20">
-        <h2 className="text-4xl font-bold text-primary mb-12 text-center">The Tidy Bunny Standard</h2>
+        <h2 className="text-4xl font-bold text-primary mb-12 text-center">The Gidz Cleaning Services Standard</h2>
 
         <div className="max-w-4xl mx-auto">
           <div className="grid gap-6 md:grid-cols-3 mb-8">
@@ -132,7 +132,7 @@ export default function AboutPage() {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-primary mb-6">Our Team</h2>
           <p className="text-lg text-foreground/70 mb-8">
-            Every member of the Tidy Bunny team is carefully selected, background-checked, and trained to our premium standard. We're not just cleaners—we're caretakers of your space.
+            Every member of the Gidz Cleaning Services team is carefully selected, background-checked, and trained to our premium standard. We're not just cleaners—we're caretakers of your space.
           </p>
           <p className="text-foreground/70">
             Your consistent team approach means better results, familiarity with your space, and the kind of care that comes from building a real relationship with a home.
@@ -142,7 +142,7 @@ export default function AboutPage() {
 
       {/* CTA */}
       <Section className="bg-primary text-primary-foreground text-center">
-        <h2 className="text-4xl font-bold mb-4">Experience the Tidy Bunny Difference</h2>
+        <h2 className="text-4xl font-bold mb-4">Experience the Gidz Cleaning Services Difference</h2>
         <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
           Ready to let us take care of your home? Book your first cleaning today.
         </p>

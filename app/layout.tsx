@@ -11,11 +11,11 @@ const geist = Geist({ subsets: ['latin'], variable: '--font-geist-sans' })
 const geistMono = Geist_Mono({ subsets: ['latin'], variable: '--font-geist-mono' })
 
 export const metadata: Metadata = {
-  title: 'Tidy Bunny - Premium Cleaning in Kumasi',
+  title: 'Gidz Cleaning Services - Premium Cleaning in Kumasi',
   description: 'Professional home cleaning and turnover cleaning for short-stays, Airbnbs, and hotels in Kumasi. Hotel-level finish, every time.',
   keywords: 'cleaning service, kumasi, home cleaning, airbnb cleaning, hotel cleaning, turnover',
   openGraph: {
-    title: 'Tidy Bunny - Premium Cleaning in Kumasi',
+    title: 'Gidz Cleaning Services - Premium Cleaning in Kumasi',
     description: 'Professional cleaning for homes and short-stays.',
     type: 'website',
   },

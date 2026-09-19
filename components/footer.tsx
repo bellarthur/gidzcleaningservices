@@ -16,8 +16,8 @@ export function Footer() {
             <div className="flex justify-start">
               <Link href="/" className="flex items-center gap-2 group">
                 <img
-                  src="/tidybunnylogo.jpeg"
-                  alt="Tidy Bunny"
+                  src="/gidzcleaningservices-logo.jpeg"
+                  alt="Gidz Cleaning Services"
                   width={100}
                   height={10}
                   className="h-16 md:h-20 object-cover md:w-16 w-20 group-hover:scale-110 transition-transform"
@@ -134,7 +134,7 @@ export function Footer() {
         <div className="border-t border-border pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-foreground/60">
-              © {currentYear} Tidy Bunny Cleaning Service. All rights reserved.
+              © {currentYear} Gidz Cleaning Services. All rights reserved.
             </p>
             <p className="text-sm text-foreground/60">
               Premium cleaning for Kumasi homes and short-stays.

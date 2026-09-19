@@ -191,8 +191,8 @@ export function Header() {
           <div className="flex justify-center">
             <Link href="/" className="flex items-center gap-2 group">
               <img
-                src="/tidybunnylogo.jpeg"
-                alt="Tidy Bunny"
+                src="/gidzcleaningservices-logo.jpeg"
+                alt="Gidz Cleaning Services"
                 width={100}
                 height={10}
                 className="h-16 md:h-20 object-cover md:w-36 w-20 group-hover:scale-110 transition-transform"

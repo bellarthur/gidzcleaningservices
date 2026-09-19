@@ -135,7 +135,7 @@ function buildQuoteMessage(values: QuoteValues) {
   ].filter(Boolean)
 
   const lines: string[] = []
-  lines.push('Hi Tidy Bunny, I’d like to book a cleaning using the quote below.')
+  lines.push('Hi Gidz Cleaning Services, I’d like to book a cleaning using the quote below.')
   lines.push('')
   lines.push(`Name: ${values.fullName}`)
   lines.push(`Phone/WhatsApp: ${values.phone}`)
@@ -625,7 +625,7 @@ export function QuoteRequestForm() {
                       <div className="space-y-1">
                         <FormLabel className="font-normal">I understand the commitment</FormLabel>
                         <FormDescription>
-                          By sending the WhatsApp message, I’m committing to this quote, scope, and terms. Tidy Bunny will reply to confirm date/time and access details.
+                          By sending the WhatsApp message, I’m committing to this quote, scope, and terms. Gidz Cleaning Services will reply to confirm date/time and access details.
                         </FormDescription>
                         <FormMessage />
                       </div>
@@ -648,7 +648,7 @@ export function QuoteRequestForm() {
                   Prefer to message immediately?{' '}
                   <a
                     className="underline underline-offset-4"
-                    href={buildWhatsAppUrl(WHATSAPP_NUMBER, 'Hi Tidy Bunny, I’d like to request a cleaning quote.')}
+                    href={buildWhatsAppUrl(WHATSAPP_NUMBER, 'Hi Gidz Cleaning Services, I’d like to request a cleaning quote.')}
                     target="_blank"
                     rel="noopener noreferrer"
                   >

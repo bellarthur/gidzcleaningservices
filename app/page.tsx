@@ -9,7 +9,7 @@ export default function Home() {
       {/* PARALLAX HERO SECTION */}
       <ParallaxHero
         headline="Cleaning Service for Homes & Short-Stays in Kumasi."
-        subheading="Tidy Bunny Cleaning Service is a reliable and detailed-oriented cleaning service committed to delivering spotless, healthy, and refereshing spaces. We provide high quality residential and commercial cleaning using safe and effective methods tailored to each clients needs. With Tidy Bunny, cleaning is not just a service - it's a standard."
+        subheading="Gidz Cleaning Services is a reliable and detailed-oriented cleaning service committed to delivering spotless, healthy, and refreshing spaces. We provide high-quality residential and commercial cleaning using safe and effective methods tailored to each client's needs. With Gidz Cleaning Services, cleaning is not just a service—it's a standard."
         backgroundImage="/woman-is-holding-cleaning-product-gloves-rags-basin-white-wall.jpg"
       />
 

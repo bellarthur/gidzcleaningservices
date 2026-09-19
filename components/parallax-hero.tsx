@@ -45,7 +45,7 @@ export function ParallaxHero({
     <section
       ref={sectionRef}
       className="relative isolate w-full overflow-hidden"
-      aria-label="Tidy Bunny premium cleaning hero"
+      aria-label="Gidz Cleaning Services premium cleaning hero"
     >
       {/* Background */}
       <div className="absolute inset-0 -z-10">

@@ -53,7 +53,7 @@ export default function ForHomesPage() {
 
       {/* BENEFITS */}
       <Section className="bg-secondary/20">
-        <h2 className="text-4xl font-bold text-primary mb-12 text-center">Why Choose Tidy Bunny for Your Home?</h2>
+        <h2 className="text-4xl font-bold text-primary mb-12 text-center">Why Choose Gidz Cleaning Services for Your Home?</h2>
         <div className="grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
           <motion.div {...fadeInUp} className="rounded-xl border border-border bg-card p-8">
             <div className="mb-4 inline-block rounded-lg bg-accent/10 p-3">

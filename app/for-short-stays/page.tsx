@@ -52,7 +52,7 @@ export default function ForShortStaysPage() {
 
       {/* WHY US */}
       <Section className="bg-secondary/20">
-        <h2 className="text-4xl font-bold text-primary mb-12 text-center">Why Hosts Choose Tidy Bunny</h2>
+        <h2 className="text-4xl font-bold text-primary mb-12 text-center">Why Hosts Choose Gidz Cleaning Services</h2>
         <div className="grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
           <motion.div {...fadeInUp} className="rounded-xl border border-border bg-card p-8">
             <div className="mb-4 inline-block rounded-lg bg-accent/10 p-3">
@@ -98,7 +98,7 @@ export default function ForShortStaysPage() {
 
       {/* TURNOVER STANDARD */}
       <Section>
-        <h2 className="text-4xl font-bold text-primary mb-12 text-center">The Tidy Bunny Turnover Standard</h2>
+        <h2 className="text-4xl font-bold text-primary mb-12 text-center">The Gidz Cleaning Services Turnover Standard</h2>
         <p className="text-center text-foreground/70 mb-12 max-w-2xl mx-auto">
           Every turnover is a fresh start. Here's exactly what your guests experience.
         </p>
