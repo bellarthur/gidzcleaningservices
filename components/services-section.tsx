@@ -100,10 +100,10 @@ export function AirbnbScrollServices() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div {...fadeInUp} className="flex items-end justify-between gap-6">
           <div className="max-w-2xl">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-[-0.02em] text-primary">
+            <h2 className="text-3xl font-semibold text-[#E5E7EA] sm:text-4xl lg:text-5xl">
               Categories tailored to your unique needs.
             </h2>
-            <p className="mt-3 text-base sm:text-lg text-foreground/65">
+            <p className="mt-3 text-base text-[#A7ADB7] sm:text-lg">
               Explore premium cleaning options for homes, short-stays, and hospitality spaces—designed
               to feel guest-ready every time.
             </p>
@@ -111,7 +111,7 @@ export function AirbnbScrollServices() {
 
           <div className="hidden md:flex items-center gap-3">
             <Link href="/services">
-              <Button variant="outline" className="rounded-xl">
+              <Button variant="outline" className="rounded border-accent/30 bg-transparent text-[#E5E7EA] hover:bg-accent/10 hover:text-accent">
                 View all services
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
@@ -128,10 +128,10 @@ export function AirbnbScrollServices() {
           {/* Scroll hint */}
           <motion.div
             style={{ opacity: hintOpacity }}
-            className="pointer-events-none absolute right-4 top-[-34px] hidden sm:flex items-center gap-2 text-xs text-foreground/55"
+            className="pointer-events-none absolute right-4 top-[-34px] hidden items-center gap-2 text-xs text-[#A7ADB7] sm:flex"
             aria-hidden="true"
           >
-            <span className="inline-flex h-6 items-center rounded-full border border-border bg-card px-2">
+            <span className="inline-flex h-6 items-center rounded border border-[#C7C9CC]/15 bg-[#111318] px-2">
               Scroll
             </span>
             <span>→</span>
@@ -159,7 +159,7 @@ export function AirbnbScrollServices() {
           {/* Mobile CTA */}
           <div className="mt-6 flex md:hidden">
             <Link href="/services" className="w-full">
-              <Button variant="outline" className="w-full rounded-xl">
+              <Button variant="outline" className="w-full rounded border-accent/30 bg-transparent text-[#E5E7EA] hover:bg-accent/10 hover:text-accent">
                 View all services
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
@@ -182,7 +182,7 @@ function ServiceTileCard({ tile }: { tile: ServiceTile }) {
     >
       <Link
         href={tile.href}
-        className="group block overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition hover:shadow-lg"
+        className="group block overflow-hidden rounded border border-[#C7C9CC]/15 bg-[#111318] shadow-[0_12px_36px_rgba(0,0,0,0.22)] transition hover:border-accent/35 hover:shadow-[0_0_26px_rgba(0,143,245,0.16)]"
       >
         {/* Image */}
         <div className="relative h-52 sm:h-56">
@@ -197,8 +197,8 @@ function ServiceTileCard({ tile }: { tile: ServiceTile }) {
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
 
           {/* Tag */}
-          <div className="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-xs text-white/90 backdrop-blur">
-            <Sparkles className="h-3.5 w-3.5 text-amber-200/90" />
+          <div className="absolute left-4 top-4 inline-flex items-center gap-2 rounded border border-accent/35 bg-[#008FF5]/15 px-3 py-1.5 text-xs text-white/90 backdrop-blur">
+            <Sparkles className="h-3.5 w-3.5 text-accent" />
             {tile.tag}
           </div>
 
@@ -213,10 +213,10 @@ function ServiceTileCard({ tile }: { tile: ServiceTile }) {
 
         {/* Footer row */}
         <div className="flex items-center justify-between gap-4 px-5 py-4">
-          <p className="text-sm text-foreground/70">
-            Learn more <span className="text-foreground/50">→</span>
+          <p className="text-sm text-[#A7ADB7]">
+            Learn more <span className="text-accent">→</span>
           </p>
-          <span className="inline-flex h-9 items-center rounded-xl border border-border bg-background px-3 text-sm font-medium text-primary transition group-hover:bg-secondary/30">
+          <span className="inline-flex h-9 items-center rounded border border-accent/30 bg-[#08090B] px-3 text-sm font-medium text-[#E5E7EA] transition group-hover:bg-accent/10 group-hover:text-accent">
             Explore
           </span>
         </div>

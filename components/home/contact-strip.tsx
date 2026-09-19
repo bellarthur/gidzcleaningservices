@@ -8,7 +8,10 @@ import { fadeInUp } from '@/lib/motion'
 
 export function ContactStrip() {
   return (
-    <motion.section {...fadeInUp} className="py-20 bg-primary text-primary-foreground">
+    <motion.section
+      {...fadeInUp}
+      className="border-y border-accent/20 bg-[#08090B] bg-[radial-gradient(900px_circle_at_50%_0%,rgba(0,143,245,0.20),transparent_58%)] py-20 text-[#F5F7FA]"
+    >
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-4xl sm:text-5xl font-bold mb-4">Book premium cleaning in Kumasi</h2>
         <p className="text-lg opacity-90 mb-8">
@@ -20,7 +23,7 @@ export function ContactStrip() {
             <Button
               size="lg"
               variant="outline"
-              className="border-primary-foreground rounded hover:bg-primary-foreground/10 bg-transparent"
+              className="rounded border-accent/45 bg-accent text-accent-foreground shadow-[0_0_28px_rgba(0,143,245,0.32)] hover:bg-[#0057B8]"
             >
               Request a Quote
             </Button>
@@ -42,4 +45,3 @@ export function ContactStrip() {
     </motion.section>
   )
 }
-

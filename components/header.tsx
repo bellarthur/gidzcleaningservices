@@ -2,6 +2,7 @@
 
 import * as React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, ChevronDown } from 'lucide-react'
 
@@ -48,7 +49,7 @@ function NavLinks({
           key={item.href}
           href={item.href}
           onClick={onNavigate}
-          className="text-base font-medium text-foreground/80 hover:text-accent transition-colors"
+          className="text-base font-medium text-[#C7C9CC] transition-colors hover:text-accent"
         >
           {item.label}
         </Link>
@@ -65,7 +66,7 @@ function CallWhatsAppMenu({ fullWidth = false }: { fullWidth?: boolean }) {
           size="sm"
           className={[
             fullWidth ? 'w-full' : '',
-            'bg-accent hover:bg-accent/90 text-accent-foreground rounded',
+            'rounded border border-accent/40 bg-accent text-accent-foreground shadow-[0_0_22px_rgba(0,143,245,0.28)] hover:bg-[#0057B8]',
           ].join(' ')}
         >
           Call/WhatsApp
@@ -111,7 +112,7 @@ function DesktopLeftDrawer({
             {/* Overlay (custom) */}
             <motion.div
               key="overlay"
-              className="fixed inset-0 z-50 bg-black/40"
+              className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -122,7 +123,7 @@ function DesktopLeftDrawer({
             {/* Panel (LEFT) */}
             <motion.aside
               key="panel"
-              className="fixed left-0 top-0 z-50 h-screen w-[320px] max-w-[85vw] bg-background border-r border-border p-6 shadow-xl"
+              className="fixed left-0 top-0 z-50 h-screen w-[320px] max-w-[85vw] border-r border-accent/20 bg-[#08090B] p-6 shadow-[0_0_50px_rgba(0,143,245,0.16)]"
               initial={{ x: -340, opacity: 1 }}
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: -340, opacity: 1 }}
@@ -131,12 +132,12 @@ function DesktopLeftDrawer({
               aria-label="Desktop menu"
             >
               <div className="flex items-center justify-between mb-6">
-                <h3 className="text-lg font-semibold">Menu</h3>
+                <h3 className="text-lg font-semibold text-[#E5E7EA]">Menu</h3>
 
                 <DialogClose asChild>
                   <button
                     onClick={close}
-                    className="rounded-full p-2 hover:bg-secondary/20"
+                    className="rounded p-2 text-[#C7C9CC] hover:bg-accent/10 hover:text-accent"
                     aria-label="Close menu"
                   >
                     <X className="h-5 w-5" />
@@ -166,21 +167,21 @@ export function Header() {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="sticky top-0 z-40 border-b border-border bg-background supports-[backdrop-filter]:bg-background/60"
+      className="sticky top-0 z-40 border-b border-accent/20 bg-[#08090B]/95 shadow-[0_1px_0_rgba(199,201,204,0.08)] supports-[backdrop-filter]:bg-[#08090B]/80"
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 bg-background/90">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-3 items-center py-4">
           {/* Left: menu buttons */}
           <div className="flex items-center">
             {/* Mobile toggle */}
-            <button onClick={toggleMobileMenu} className="md:hidden" aria-label="Toggle menu">
+            <button onClick={toggleMobileMenu} className="rounded p-2 text-[#C7C9CC] hover:bg-accent/10 hover:text-accent md:hidden" aria-label="Toggle menu">
               {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
 
             {/* Desktop drawer trigger */}
             <button
               onClick={openDesktopMenu}
-              className="hidden md:inline-flex items-center p-2 rounded-md hover:bg-secondary/20"
+              className="hidden items-center rounded p-2 text-[#C7C9CC] hover:bg-accent/10 hover:text-accent md:inline-flex"
               aria-label="Open menu"
             >
               <Menu className="h-5 w-5" />
@@ -190,12 +191,13 @@ export function Header() {
           {/* Center: Logo */}
           <div className="flex justify-center">
             <Link href="/" className="flex items-center gap-2 group">
-              <img
+              <Image
                 src="/gidzcleaningservices-logo.jpeg"
                 alt="Gidz Cleaning Services"
-                width={100}
-                height={10}
-                className="h-16 md:h-20 object-cover md:w-36 w-20 group-hover:scale-110 transition-transform"
+                width={144}
+                height={80}
+                priority
+                className="h-16 w-24 object-contain drop-shadow-[0_0_18px_rgba(0,143,245,0.25)] transition-transform group-hover:scale-105 md:h-20 md:w-36"
               />
             </Link>
           </div>
@@ -203,7 +205,7 @@ export function Header() {
           {/* Right: Mobile CTA */}
             <div className="md:hidden flex items-center justify-end gap-3">
             <a href={`tel:${PHONE_NUMBER}`}>
-              <Button size="sm" className="bg-accent rounded hover:bg-accent/90 text-accent-foreground">
+              <Button size="sm" className="rounded border border-accent/40 bg-accent text-accent-foreground shadow-[0_0_18px_rgba(0,143,245,0.28)] hover:bg-[#0057B8]">
               Call Us
               </Button>
             </a>
@@ -223,7 +225,7 @@ export function Header() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="border-t border-border py-4 md:hidden"
+              className="border-t border-accent/20 py-4 md:hidden"
             >
               <NavLinks
                 items={NAV_ITEMS}
@@ -233,7 +235,7 @@ export function Header() {
 
               <div className="flex flex-col gap-2">
                 <Link href="/quote" onClick={closeMobileMenu}>
-                  <Button size="sm" variant="outline" className="w-full bg-transparent">
+                  <Button size="sm" variant="outline" className="w-full border-[#C7C9CC]/35 bg-transparent text-[#E5E7EA] hover:bg-accent/10 hover:text-accent">
                     Quote
                   </Button>
                 </Link>

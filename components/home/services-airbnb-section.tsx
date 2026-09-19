@@ -308,11 +308,11 @@ function CategoryTabs({
               key={cat.id}
               onClick={() => onChange(cat.id)}
               className={[
-                'shrink-0 rounded-full border px-3.5 py-2 text-sm transition',
+                'shrink-0 rounded border px-3.5 py-2 text-sm transition',
                 'flex items-center gap-2',
                 active
-                  ? 'border-primary/30 bg-primary/5 text-primary shadow-sm'
-                  : 'border-border bg-card hover:bg-secondary/30 text-foreground/80',
+                  ? 'border-accent/45 bg-accent/10 text-[#E5E7EA] shadow-[0_0_18px_rgba(0,143,245,0.18)]'
+                  : 'border-[#C7C9CC]/15 bg-[#111318] text-[#A7ADB7] hover:border-accent/35 hover:bg-accent/10 hover:text-[#E5E7EA]',
               ].join(' ')}
               aria-pressed={active}
             >
@@ -349,9 +349,9 @@ function ServiceDetailsModal({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-4xl p-0 overflow-hidden">
+      <DialogContent className="max-w-4xl overflow-hidden rounded p-0 border-[#C7C9CC]/20 bg-[#08090B]">
         {/* Sticky top bar */}
-        <div className="sticky top-0 z-20 flex items-center justify-between gap-4 border-b border-border bg-background/90 px-4 py-3 backdrop-blur">
+        <div className="sticky top-0 z-20 flex items-center justify-between gap-4 border-b border-accent/20 bg-[#08090B]/92 px-4 py-3 backdrop-blur">
           <div className="max-w-[60%] truncate text-sm font-medium">
             <DialogHeader className="space-y-0 text-left">
               <DialogTitle className="truncate text-base sm:text-lg">{item.title}</DialogTitle>
@@ -362,7 +362,7 @@ function ServiceDetailsModal({
           <DialogClose asChild>
             <button
               aria-label="Close"
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1.5 text-sm font-semibold text-foreground/80 hover:bg-secondary/30"
+              className="inline-flex items-center gap-2 rounded border border-[#C7C9CC]/20 bg-[#111318] px-3 py-1.5 text-sm font-semibold text-[#C7C9CC] hover:border-accent/40 hover:bg-accent/10 hover:text-accent"
             >
               <X className="h-4 w-4" />
               Close
@@ -386,7 +386,7 @@ function ServiceDetailsModal({
             <div className="absolute inset-0 bg-[radial-gradient(900px_circle_at_20%_20%,rgba(255,255,255,0.14),transparent_55%)]" />
             {item.badge ? (
               <div className="absolute left-4 top-4">
-                <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold text-white backdrop-blur">
+                <span className="inline-flex items-center rounded border border-accent/35 bg-[#008FF5]/15 px-3 py-1 text-xs font-semibold text-white backdrop-blur">
                   {item.badge}
                 </span>
               </div>
@@ -394,11 +394,11 @@ function ServiceDetailsModal({
 
             <div className="absolute bottom-4 left-4 right-4">
               <div className="flex flex-wrap items-center gap-2">
-                <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-xs text-white/90 backdrop-blur">
+                <span className="inline-flex items-center gap-2 rounded border border-[#C7C9CC]/20 bg-[#111318]/70 px-3 py-1.5 text-xs text-white/90 backdrop-blur">
                   <MapPin className="h-3.5 w-3.5" />
                   {item.meta}
                 </span>
-                <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-xs text-white/90 backdrop-blur">
+                <span className="inline-flex items-center gap-2 rounded border border-[#C7C9CC]/20 bg-[#111318]/70 px-3 py-1.5 text-xs text-white/90 backdrop-blur">
                   <Clock className="h-3.5 w-3.5" />
                   Quote in minutes on WhatsApp
                 </span>
@@ -410,7 +410,7 @@ function ServiceDetailsModal({
             <div className="grid gap-6 lg:grid-cols-12">
               {/* Left: At-a-glance */}
               <div className="lg:col-span-5 space-y-4">
-                <div className="rounded-2xl border border-border bg-secondary/10 p-4">
+                <div className="rounded border border-[#C7C9CC]/15 bg-[#111318] p-4">
                   <p className="text-sm font-semibold text-primary">Overview</p>
                   <p className="mt-2 text-sm text-foreground/75 leading-relaxed">
                     {item.description ||
@@ -419,13 +419,13 @@ function ServiceDetailsModal({
                 </div>
 
                 {item.idealFor ? (
-                  <div className="rounded-2xl border border-border bg-background p-4">
+                  <div className="rounded border border-[#C7C9CC]/15 bg-[#08090B] p-4">
                     <p className="text-sm font-semibold text-primary">Ideal for</p>
                     <p className="mt-2 text-sm text-foreground/75 leading-relaxed">{item.idealFor}</p>
                   </div>
                 ) : null}
 
-                <div className="rounded-2xl border border-border bg-background p-4">
+                <div className="rounded border border-[#C7C9CC]/15 bg-[#08090B] p-4">
                   <p className="text-sm font-semibold text-primary">Our standard</p>
                   <ul className="mt-3 space-y-2 text-sm text-foreground/75">
                     {[
@@ -434,7 +434,7 @@ function ServiceDetailsModal({
                       { icon: Sparkles, text: 'Hotel-level presentation when requested' },
                     ].map(({ icon: Icon, text }) => (
                       <li key={text} className="flex gap-3">
-                        <span className="mt-0.5 inline-flex h-7 w-7 items-center justify-center rounded-lg border border-border bg-secondary/20 text-accent">
+                        <span className="mt-0.5 inline-flex h-7 w-7 items-center justify-center rounded border border-accent/25 bg-accent/10 text-accent">
                           <Icon className="h-4 w-4" />
                         </span>
                         <span className="leading-relaxed">{text}</span>
@@ -446,13 +446,13 @@ function ServiceDetailsModal({
 
               {/* Right: Included */}
               <div className="lg:col-span-7">
-                <div className="rounded-2xl border border-border bg-card p-4 sm:p-5">
+                <div className="rounded border border-[#C7C9CC]/15 bg-[#111318] p-4 sm:p-5">
                   <p className="text-sm font-semibold text-primary mb-3">What we do</p>
                   {item.includes?.length ? (
                     <ul className="grid gap-2">
                       {item.includes.map((x) => (
-                        <li key={x} className="flex gap-3 rounded-xl border border-border bg-background px-3 py-2 text-sm text-foreground/80">
-                          <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-accent/10 text-accent">
+                        <li key={x} className="flex gap-3 rounded border border-[#C7C9CC]/15 bg-[#08090B] px-3 py-2 text-sm text-[#C7C9CC]">
+                          <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded bg-accent/10 text-accent">
                             <CheckCircle2 className="h-4 w-4" />
                           </span>
                           <span className="leading-relaxed">{x}</span>
@@ -465,12 +465,12 @@ function ServiceDetailsModal({
                     </p>
                   )}
 
-                  <div className="mt-5 rounded-xl border border-border bg-secondary/10 p-4">
+                  <div className="mt-5 rounded border border-accent/20 bg-accent/10 p-4">
                     <p className="text-sm font-semibold text-primary">Next steps</p>
                     <ol className="mt-3 grid gap-2 text-sm text-foreground/75 sm:grid-cols-3">
-                      <li className="rounded-xl border border-border bg-background px-3 py-2">1) Get a quote</li>
-                      <li className="rounded-xl border border-border bg-background px-3 py-2">2) Confirm schedule</li>
-                      <li className="rounded-xl border border-border bg-background px-3 py-2">3) Enjoy the finish</li>
+                      <li className="rounded border border-[#C7C9CC]/15 bg-[#08090B] px-3 py-2">1) Get a quote</li>
+                      <li className="rounded border border-[#C7C9CC]/15 bg-[#08090B] px-3 py-2">2) Confirm schedule</li>
+                      <li className="rounded border border-[#C7C9CC]/15 bg-[#08090B] px-3 py-2">3) Enjoy the finish</li>
                     </ol>
                     <p className="mt-3 text-xs text-foreground/60">
                       Quotes depend on the size of the space and how deep the clean needs to be.
@@ -483,14 +483,14 @@ function ServiceDetailsModal({
         </div>
 
         {/* Bottom CTA bar */}
-        <div className="border-t border-border bg-background/90 px-4 py-3 backdrop-blur">
+        <div className="border-t border-accent/20 bg-[#08090B]/92 px-4 py-3 backdrop-blur">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
             <p className="text-xs text-foreground/60">
               Ready? Generate your quote and send it via WhatsApp.
             </p>
             <div className="flex flex-col sm:flex-row gap-2">
               <Link href="/quote" className="w-full sm:w-auto">
-                <Button className="w-full sm:w-auto rounded-xl bg-accent hover:bg-accent/90 text-accent-foreground">
+                <Button className="w-full sm:w-auto rounded border border-accent/40 bg-accent text-accent-foreground shadow-[0_0_20px_rgba(0,143,245,0.25)] hover:bg-[#0057B8]">
                   Request a Quote
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -517,7 +517,7 @@ function ServiceListingCard({
 }) {
   return (
     <motion.div {...fadeInScale} className="group">
-      <div className="rounded-2xl border border-border bg-card shadow-sm transition hover:shadow-lg overflow-hidden">
+      <div className="overflow-hidden rounded border border-[#C7C9CC]/15 bg-[#111318] shadow-[0_12px_36px_rgba(0,0,0,0.22)] transition hover:border-accent/35 hover:shadow-[0_0_26px_rgba(0,143,245,0.16)]">
         <div className="relative aspect-[4/3]">
           <Image
             src={item.image}
@@ -529,7 +529,7 @@ function ServiceListingCard({
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-black/0" />
           {item.badge ? (
             <div className="absolute left-3 top-3">
-              <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold text-white backdrop-blur">
+              <span className="inline-flex items-center rounded border border-accent/35 bg-[#008FF5]/15 px-3 py-1 text-xs font-semibold text-white backdrop-blur">
                 {item.badge}
               </span>
             </div>
@@ -539,20 +539,20 @@ function ServiceListingCard({
         <div className="p-3 md:p-5">
           <div className="flex items-start justify-between gap-4">
             <div className="min-w-0">
-              <p className="truncate text-sm md:text-base font-semibold text-primary">{item.title}</p>
-              <p className="mt-1 text-xs md:text-sm text-foreground/70 line-clamp-2">{item.subtitle}</p>
+              <p className="truncate text-sm font-semibold text-[#E5E7EA] md:text-base">{item.title}</p>
+              <p className="mt-1 line-clamp-2 text-xs text-[#A7ADB7] md:text-sm">{item.subtitle}</p>
             </div>
           </div>
 
-          <p className="mt-3 text-xs text-foreground/60 line-clamp-2">{item.meta}</p>
+          <p className="mt-3 line-clamp-2 text-xs text-[#A7ADB7]">{item.meta}</p>
 
           <div className="mt-4 flex items-center justify-between gap-3">
-            <span className="text-xs text-foreground/55">View checklist & details</span>
+            <span className="text-xs text-[#A7ADB7]">View checklist & details</span>
             <Button
               type="button"
               variant="outline"
               size="sm"
-              className="rounded-xl border-primary/20 text-primary hover:bg-primary/5"
+              className="rounded border-accent/30 bg-transparent text-[#E5E7EA] hover:bg-accent/10 hover:text-accent"
               onClick={() => onOpenDetails(item)}
             >
               View details
@@ -581,10 +581,10 @@ export function ServicesAirbnbSection() {
       <div className="mx-auto max-w-6xl">
         <motion.div {...fadeInUp} className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-2xl">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-[-0.02em] text-primary">
+            <h2 className="text-3xl font-semibold text-[#E5E7EA] sm:text-4xl lg:text-5xl">
               Services tailored to your space
             </h2>
-            <p className="mt-3 text-base sm:text-lg text-foreground/65">
+            <p className="mt-3 text-base text-[#A7ADB7] sm:text-lg">
               Pick a category, open any service, and see the checklist, ideal fit, and next steps.
             </p>
           </div>

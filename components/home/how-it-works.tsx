@@ -145,10 +145,10 @@ export function HowItWorks() {
   }
 
   return (
-    <Section className="bg-secondary/20">
+    <Section className="bg-[#111318]">
       <div ref={wrapRef}>
-        <h2 className="text-4xl sm:text-5xl font-bold text-center mb-4 text-primary">How It Works</h2>
-        <p className="mx-auto max-w-3xl text-center text-foreground/70">
+        <h2 className="mb-4 text-center text-4xl font-bold text-[#E5E7EA] sm:text-5xl">How It Works</h2>
+        <p className="mx-auto max-w-3xl text-center text-[#A7ADB7]">
           Simple & predictable. We guide you from quote → schedule → a hotel-level finish—every time.
         </p>
 
@@ -175,25 +175,25 @@ export function HowItWorks() {
                   onClick={() => onSelectStep(idx)}
                   aria-pressed={isActive}
                   className={[
-                    'relative text-left rounded-2xl border px-4 py-4 transition',
+                    'relative text-left rounded border px-4 py-4 transition',
                     'focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background',
                     isActive
-                      ? 'border-accent/40 bg-gradient-to-b from-accent/10 via-background to-background shadow-[0_12px_30px_rgba(0,0,0,0.08)]'
-                      : 'border-border bg-card hover:bg-secondary/30',
+                      ? 'border-accent/45 bg-gradient-to-b from-accent/15 via-[#111318] to-[#08090B] shadow-[0_0_26px_rgba(0,143,245,0.16)]'
+                      : 'border-[#C7C9CC]/15 bg-[#08090B] hover:border-accent/35 hover:bg-accent/10',
                   ].join(' ')}
                   layout
                 >
                   <div className="flex items-start justify-between gap-3">
                     <div className="min-w-0">
-                      <p className="text-xs font-semibold text-foreground/55">{s.number}</p>
-                      <p className="mt-1 text-sm font-semibold text-primary leading-snug">{s.title}</p>
+                      <p className="text-xs font-semibold text-[#A7ADB7]">{s.number}</p>
+                      <p className="mt-1 text-sm font-semibold leading-snug text-[#E5E7EA]">{s.title}</p>
                     </div>
 
                     <motion.div
                       aria-hidden="true"
                       className={[
                         'shrink-0 inline-flex h-10 w-10 items-center justify-center rounded-xl border',
-                        isActive ? 'border-accent/30 bg-accent/10 text-accent' : 'border-border bg-background text-foreground/70',
+                        isActive ? 'border-accent/35 bg-accent/10 text-accent shadow-[0_0_14px_rgba(0,143,245,0.22)]' : 'border-[#C7C9CC]/15 bg-[#111318] text-[#A7ADB7]',
                       ].join(' ')}
                       animate={
                         !reduceMotion && isActive
@@ -210,7 +210,7 @@ export function HowItWorks() {
                     </motion.div>
                   </div>
 
-                  <p className="mt-2 text-xs text-foreground/65 line-clamp-2">{s.summary}</p>
+                  <p className="mt-2 line-clamp-2 text-xs text-[#A7ADB7]">{s.summary}</p>
 
                   {/* {isActive ? (
                     <div className="mt-3 flex items-center gap-2 text-[11px] text-foreground/55">
