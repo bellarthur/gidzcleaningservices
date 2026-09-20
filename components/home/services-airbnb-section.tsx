@@ -8,6 +8,7 @@ import {
   ArrowRight,
   CheckCircle2,
   Clock,
+  Building2,
   MapPin,
   ShieldCheck,
   Sparkles,
@@ -28,7 +29,7 @@ import {
 import { Section } from '@/components/section'
 import { fadeInScale, fadeInUp } from '@/lib/motion'
 
-type CategoryId = 'homes' | 'shortstays' | 'addons'
+type CategoryId = 'homes' | 'shortstays' | 'commercial' | 'addons'
 
 type ServiceItem = {
   id: string
@@ -62,6 +63,12 @@ const CATEGORIES: Array<{
     label: 'Short-Stays & Hotels',
     icon: Hotel,
     hint: 'Airbnb, guest houses, hotels',
+  },
+  {
+    id: 'commercial',
+    label: 'Offices & Commercial',
+    icon: Building2,
+    hint: 'Offices, event centers & warehouses',
   },
   {
     id: 'addons',
@@ -231,6 +238,87 @@ const SERVICES: Record<CategoryId, ServiceItem[]> = {
       idealFor: 'Hosts who want clear updates and accountability after each clean.',
     },
   ],
+  commercial: [
+    {
+      id: 'office-cleaning',
+      title: 'Office Cleaning',
+      subtitle: 'Professional cleaning for productive workplaces',
+      meta: 'Scheduled daily, weekly, or one-time service',
+      image:
+        'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80',
+      badge: 'Workplace Essential',
+      href: '/services',
+      description:
+        'We keep offices clean, organized, and welcoming for teams, clients, and visitors without disrupting your workday.',
+      includes: [
+        'Workstations and shared surfaces wiped',
+        'Floors vacuumed and mopped',
+        'Kitchen and break areas refreshed',
+        'Bathrooms cleaned and sanitized',
+        'Bins emptied and supplies checked',
+      ],
+      idealFor: 'Offices, studios, clinics, and professional workplaces.',
+    },
+    {
+      id: 'commercial-space-cleaning',
+      title: 'Commercial Space Cleaning',
+      subtitle: 'Reliable care for customer-facing spaces',
+      meta: 'Tailored around opening hours and foot traffic',
+      image:
+        'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=80',
+      href: '/services',
+      description:
+        'We clean commercial spaces with a practical checklist built around your layout, operating hours, and customer experience.',
+      includes: [
+        'Public areas and reception spaces cleaned',
+        'High-touch surfaces sanitized',
+        'Floors and entrances refreshed',
+        'Restrooms cleaned and restocked',
+        'Waste removal and final inspection',
+      ],
+      idealFor: 'Retail spaces, showrooms, salons, clinics, and customer-facing businesses.',
+    },
+    {
+      id: 'event-center-cleaning',
+      title: 'Event Center Cleaning',
+      subtitle: 'Before-and-after cleaning for memorable occasions',
+      meta: 'Setup-ready, post-event, or full event support',
+      image:
+        'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1600&q=80',
+      badge: 'Event Ready',
+      href: '/services',
+      description:
+        'We prepare event spaces before guests arrive and restore them after the event so hosts can focus on the occasion.',
+      includes: [
+        'Pre-event floors and surfaces refreshed',
+        'Seating and guest areas cleaned',
+        'Restrooms checked and restocked',
+        'Post-event waste and table clearing',
+        'Final walkthrough of the venue',
+      ],
+      idealFor: 'Weddings, conferences, parties, churches, and community venues.',
+    },
+    {
+      id: 'warehouse-cleaning',
+      title: 'Warehouse Cleaning',
+      subtitle: 'Safer, cleaner spaces for stock and operations',
+      meta: 'Routine maintenance or scheduled deep cleaning',
+      image:
+        'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80',
+      badge: 'Large-Space Care',
+      href: '/services',
+      description:
+        'We help warehouses stay orderly and presentable by focusing on accessible floors, shared areas, offices, and staff facilities.',
+      includes: [
+        'Accessible floor areas swept and cleaned',
+        'Loading and entry areas refreshed',
+        'Staff rooms and offices cleaned',
+        'Bathrooms and break areas sanitized',
+        'Waste areas cleared and checked',
+      ],
+      idealFor: 'Warehouses, storage facilities, distribution spaces, and workshops.',
+    },
+  ],
   addons: [
     {
       id: 'interior-windows',
@@ -296,7 +384,7 @@ function CategoryTabs({
   return (
     <div className="relative">
       {/* Fade edges like Airbnb horizontal category strip */}
-      <div className="pointer-events-none absolute inset-y-2 left-0 w-10 bg-gradient-to-r from-background to-transparent" />
+      <div className="pointer-events-none absolute inset-y-4 left-0 w-10 bg-gradient-to-r from-background to-transparent" />
       <div className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-background to-transparent" />
 
       <div className="flex gap-2 overflow-x-auto pb-2 pt-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">

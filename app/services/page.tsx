@@ -91,6 +91,32 @@ export default function ServicesPage() {
         </p>
       </Section>
 
+      {/* FOR OFFICES & COMMERCIAL SPACES */}
+      <Section>
+        <h2 className="text-4xl font-bold text-primary mb-12 text-center">For Offices & Commercial Spaces</h2>
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto mb-8">
+          <ServiceCard
+            title="Office Cleaning"
+            description="Scheduled cleaning for workstations, shared spaces, kitchens, bathrooms, and professional workplaces."
+          />
+          <ServiceCard
+            title="Commercial Space Cleaning"
+            description="Reliable cleaning for customer-facing spaces such as shops, salons, clinics, studios, and showrooms."
+          />
+          <ServiceCard
+            title="Event Center Cleaning"
+            description="Before-and-after cleaning for weddings, conferences, parties, churches, and other events."
+          />
+          <ServiceCard
+            title="Warehouse Cleaning"
+            description="Routine cleaning for accessible warehouse floors, loading areas, staff facilities, and operational spaces."
+          />
+        </div>
+        <p className="text-center text-foreground/70 mb-8">
+          We tailor commercial cleaning schedules around your operating hours and space requirements.
+        </p>
+      </Section>
+
       {/* ADD-ONS */}
       <Section>
         <h2 className="text-4xl font-bold text-primary mb-12 text-center">Add-Ons & Extras</h2>

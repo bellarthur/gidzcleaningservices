@@ -89,9 +89,9 @@ export function ParallaxHero({
                 Accra • Premium Cleaning
               </div>
 
-              <div className="text-xs text-[#C7C9CC] sm:text-sm">
+              {/* <div className="text-xs text-[#C7C9CC] sm:text-sm">
                 Accra
-              </div>
+              </div> */}
             </motion.div>
 
             <div className="mx-auto max-w-4xl">
