@@ -497,7 +497,7 @@ function ServicesAirbnbSection() {
   return (
     <Section id="services">
       <div className="mx-auto max-w-6xl">
-        <div className="mt-">
+        <div className="mt-2">
           <CategoryTabs value={active} onChange={setActive} />
         </div>
 
@@ -523,15 +523,15 @@ function ServicesAirbnbSection() {
 
 export default function Home() {
   const openWhatsApp = () => {
-    window.open('https://wa.me/233595236285', '_blank', 'noopener,noreferrer')
+    window.open('https://wa.me/233594636671', '_blank', 'noopener,noreferrer')
   }
 
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* PARALLAX HERO SECTION */}
       <ParallaxHero
-        headline="Cleaning Service for Homes & Short-Stays in Kumasi."
-        subheading="Gidz Cleaning Services is a reliable and detailed-oriented cleaning service committed to delivering spotless, healthy, and refreshing spaces. We provide high-quality residential and commercial cleaning using safe and effective methods tailored to each client's needs. With Gidz Cleaning Services, cleaning is not just a service—it's a standard."
+        headline="Cleaning Service for Homes & Short-Stays in Accra."
+        subheading="Gidz Cleaning Services provides reliable and professional cleaning solutions for homes, offices, apartments, Airbnb properties and commercial spaces in Accra, Ghana. We focus on quality, convenience and customer satisfaction."
         backgroundImage="/anton-SnKfmC1I9fU-unsplash.jpg"
       />
 
@@ -601,7 +601,7 @@ export default function Home() {
       {/* CONTACT STRIP */}
       <motion.section {...fadeInUp} className="py-20 bg-primary text-primary-foreground">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4">Book premium cleaning in Kumasi</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4">Book premium cleaning in Accra</h2>
           <p className="text-lg opacity-90 mb-8">
             For homes, Airbnbs, guest houses, and hotels—reach out for a quote or schedule.
           </p>
@@ -610,19 +610,19 @@ export default function Home() {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-                  Call / WhatsApp 059 523 6285
+                  Call / WhatsApp 059 463 6671
                   <ChevronDown className="ml-2 h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 <DropdownMenuItem asChild>
-                  <a href="tel:+233595236285" className="cursor-pointer">
-                    Call: 059 523 6285
+                  <a href="tel:+233594636671" className="cursor-pointer">
+                    Call: 059 463 6671
                   </a>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <button onClick={openWhatsApp} className="w-full cursor-pointer text-left">
-                    WhatsApp: 059 523 6285
+                    WhatsApp: 059 463 6671
                   </button>
                 </DropdownMenuItem>
               </DropdownMenuContent>
@@ -638,7 +638,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-8 justify-center text-sm">
             <div>
               <p className="font-semibold">Address</p>
-              <p className="opacity-80">Estes Park Street, Kumasi</p>
+              <p className="opacity-80">Accra</p>
             </div>
             <div className="hidden sm:block w-px bg-primary-foreground/20" />
             <div>

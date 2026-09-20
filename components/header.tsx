@@ -26,8 +26,8 @@ const NAV_ITEMS: NavItem[] = [
   { label: 'Contact', href: '/contact' },
 ]
 
-const WHATSAPP_URL = 'https://wa.me/233595236285'
-const PHONE_NUMBER = '+233595236285'
+const WHATSAPP_URL = 'https://wa.me/233594636671'
+const PHONE_NUMBER = '+233594636671'
 
 function openWhatsApp() {
   window.open(WHATSAPP_URL, '_blank', 'noopener,noreferrer')
@@ -77,12 +77,12 @@ function CallWhatsAppMenu({ fullWidth = false }: { fullWidth?: boolean }) {
       <DropdownMenuContent align={fullWidth ? 'start' : 'end'} className={fullWidth ? 'w-48' : undefined}>
         <DropdownMenuItem asChild>
           <a href={`tel:${PHONE_NUMBER}`} className="cursor-pointer">
-            Call: 059 523 6285
+            Call: 059 463 6671
           </a>
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
           <button onClick={openWhatsApp} className="w-full cursor-pointer text-left">
-            WhatsApp: 059 523 6285
+            WhatsApp: 059 463 6671
           </button>
         </DropdownMenuItem>
       </DropdownMenuContent>

@@ -263,7 +263,7 @@ export default function ForHomesPage() {
             size="lg"
             variant="outline"
             className="border-primary-foreground hover:bg-primary-foreground/10 bg-transparent"
-            onClick={() => window.open('https://wa.me/233595236285', '_blank')}
+            onClick={() => window.open('https://wa.me/233594636671', '_blank')}
           >
             Chat on WhatsApp
           </Button>

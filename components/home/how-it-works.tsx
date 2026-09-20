@@ -36,7 +36,7 @@ const HOW_IT_WORKS_STEPS: HowItWorksStep[] = [
     summary: 'A few details help us recommend the right clean.',
     icon: MessageSquareText,
     timeLabel: '2–5 min',
-    youDo: ['Message us your location (Kumasi) + space type', 'Share size/rooms and any priority areas'],
+    youDo: ['Message us your location (Accra) + space type', 'Share size/rooms and any priority areas'],
     weDo: ['Ask the right questions (so nothing is missed)', 'Recommend the best service + add-ons'],
     tip: 'Tip: A quick photo or short note about “pain points” helps us quote faster.',
   },

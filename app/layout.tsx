@@ -1,6 +1,6 @@
 import React from "react"
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Geist, Geist_Mono, Inter } from 'next/font/google'
 
 import './globals.css'
 import { Header } from '@/components/header'
@@ -9,13 +9,18 @@ import { Toaster } from '@/components/ui/toaster'
 
 const geist = Geist({ subsets: ['latin'], variable: '--font-geist-sans' })
 const geistMono = Geist_Mono({ subsets: ['latin'], variable: '--font-geist-mono' })
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter', // Define the CSS variable name
+})
 
 export const metadata: Metadata = {
-  title: 'Gidz Cleaning Services - Premium Cleaning in Kumasi',
-  description: 'Professional home cleaning and turnover cleaning for short-stays, Airbnbs, and hotels in Kumasi. Hotel-level finish, every time.',
-  keywords: 'cleaning service, kumasi, home cleaning, airbnb cleaning, hotel cleaning, turnover',
+  title: 'Gidz Cleaning Services - Premium Cleaning in Accra',
+  description: 'Professional home cleaning and turnover cleaning for short-stays, Airbnbs, and hotels in Accra. Hotel-level finish, every time.',
+  keywords: 'cleaning service, Accra, home cleaning, airbnb cleaning, hotel cleaning, turnover',
   openGraph: {
-    title: 'Gidz Cleaning Services - Premium Cleaning in Kumasi',
+    title: 'Gidz Cleaning Services - Premium Cleaning in Accra',
     description: 'Professional cleaning for homes and short-stays.',
     type: 'website',
   },
@@ -34,7 +39,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geist.variable} ${geistMono.variable} font-sans antialiased`}>
+      <body className={`${inter.className}`}>
         <Header />
         <main>{children}</main>
         <Footer />

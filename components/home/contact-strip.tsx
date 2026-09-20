@@ -13,7 +13,7 @@ export function ContactStrip() {
       className="border-y border-accent/20 bg-[#08090B] bg-[radial-gradient(900px_circle_at_50%_0%,rgba(0,143,245,0.20),transparent_58%)] py-20 text-[#F5F7FA]"
     >
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-4xl sm:text-5xl font-bold mb-4">Book premium cleaning in Kumasi</h2>
+        <h2 className="text-4xl sm:text-5xl font-bold mb-4">Book premium cleaning in Accra</h2>
         <p className="text-lg opacity-90 mb-8">
           For homes, Airbnbs, guest houses, and hotels—reach out for a quote or schedule.
         </p>
@@ -33,7 +33,7 @@ export function ContactStrip() {
         <div className="flex flex-col sm:flex-row gap-8 justify-center text-sm">
           <div>
             <p className="font-semibold">Address</p>
-            <p className="opacity-80">Estes Park Street, Kumasi</p>
+            <p className="opacity-80">Accra</p>
           </div>
           <div className="hidden sm:block w-px bg-primary-foreground/20" />
           <div>

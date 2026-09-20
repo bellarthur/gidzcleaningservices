@@ -68,20 +68,20 @@ export default function ContactPage() {
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 max-w-5xl mx-auto">
           <motion.a
             {...fadeInUp}
-            href="tel:+233595236285"
+            href="tel:+233594636671"
             className="rounded-xl border border-border bg-card p-6 hover:shadow-lg transition-shadow"
           >
             <div className="mb-4 inline-block rounded-lg bg-accent/10 p-3">
               <Phone className="h-6 w-6 text-accent" />
             </div>
             <h3 className="font-semibold text-primary mb-2">Call Us</h3>
-            <p className="text-sm text-foreground/70">059 523 6285</p>
+            <p className="text-sm text-foreground/70">059 463 6671</p>
             <p className="text-xs text-foreground/50 mt-2">Mon–Sat, 9am–6pm</p>
           </motion.a>
 
           <motion.a
             {...fadeInUp}
-            href="https://wa.me/233595236285"
+            href="https://wa.me/233594636671"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-xl border border-border bg-card p-6 hover:shadow-lg transition-shadow"
@@ -99,8 +99,8 @@ export default function ContactPage() {
               <MapPin className="h-6 w-6 text-accent" />
             </div>
             <h3 className="font-semibold text-primary mb-2">Address</h3>
-            <p className="text-sm text-foreground/70">Estes Park Street</p>
-            <p className="text-xs text-foreground/50 mt-2">Kumasi</p>
+            {/* <p className="text-sm text-foreground/70">Estes Park Street</p> */}
+            <p className="text-xs text-foreground/50 mt-2">Accra</p>
           </motion.div>
 
           <motion.div {...fadeInUp} className="rounded-xl border border-border bg-card p-6">
@@ -192,14 +192,14 @@ export default function ContactPage() {
             <div>
               <h3 className="text-2xl font-bold text-primary mb-3">Service Area</h3>
               <p className="text-foreground/70 leading-relaxed">
-                We currently serve Kumasi and nearby areas. Contact us to confirm your location and discuss special arrangements if needed.
+                We currently serve Accra and nearby areas. Contact us to confirm your location and discuss special arrangements if needed.
               </p>
             </div>
 
             <div>
               <h3 className="text-2xl font-bold text-primary mb-3">What to Include</h3>
               <ul className="space-y-2 text-foreground/70">
-                <li>• Your location in Kumasi</li>
+                <li>• Your location in Accra</li>
                 <li>• Type of property (home, apartment, hotel, etc.)</li>
                 <li>• Preferred service and frequency</li>
                 <li>• Any special requests or questions</li>
@@ -223,7 +223,7 @@ export default function ContactPage() {
           {[
             {
               q: 'Do you service my area?',
-              a: 'We serve Kumasi and nearby areas. WhatsApp your location and we\'ll confirm coverage.',
+              a: 'We serve Accra and nearby areas. WhatsApp your location and we\'ll confirm coverage.',
             },
             {
               q: 'How far in advance should I book?',
@@ -263,7 +263,7 @@ export default function ContactPage() {
           <Button
             size="lg"
             className="bg-accent hover:bg-accent/90 text-accent-foreground"
-            onClick={() => window.open('https://wa.me/233595236285', '_blank')}
+            onClick={() => window.open('https://wa.me/233594636671', '_blank')}
           >
             Message on WhatsApp
           </Button>
@@ -273,7 +273,7 @@ export default function ContactPage() {
             className="border-primary-foreground hover:bg-primary-foreground/10 bg-transparent"
             asChild
           >
-            <a href="tel:+233595236285">Call Us Now</a>
+            <a href="tel:+233594636671">Call Us Now</a>
           </Button>
         </div>
       </Section>

@@ -8,8 +8,8 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground">
       {/* PARALLAX HERO SECTION */}
       <ParallaxHero
-        headline="Cleaning Service for Homes & Short-Stays in Kumasi."
-        subheading="Gidz Cleaning Services is a reliable and detailed-oriented cleaning service committed to delivering spotless, healthy, and refreshing spaces. We provide high-quality residential and commercial cleaning using safe and effective methods tailored to each client's needs. With Gidz Cleaning Services, cleaning is not just a service—it's a standard."
+        headline="Cleaning Service for Homes & Short-Stays in Accra."
+        subheading="Gidz Cleaning Services provides reliable and professional cleaning solutions for homes, offices, apartments, Airbnb properties and commercial spaces in Accra, Ghana. We focus on quality, convenience and customer satisfaction."
         backgroundImage="/woman-is-holding-cleaning-product-gloves-rags-basin-white-wall.jpg"
       />
 

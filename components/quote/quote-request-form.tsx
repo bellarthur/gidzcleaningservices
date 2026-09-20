@@ -27,7 +27,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Textarea } from '@/components/ui/textarea'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 
-const WHATSAPP_NUMBER = '233595236285'
+const WHATSAPP_NUMBER = '233594636671'
 
 const QuoteSchema = z.object({
   fullName: z.string().min(2, 'Please enter your name.'),
@@ -43,7 +43,7 @@ const QuoteSchema = z.object({
   bedrooms: z.coerce.number().int().min(0).max(20),
   bathrooms: z.coerce.number().int().min(0).max(20),
 
-  location: z.string().min(2, 'Please enter your area/location in Kumasi.'),
+  location: z.string().min(2, 'Please enter your area/location in Accra.'),
   preferredDate: z.string().optional(),
   timeWindow: z.enum(['morning', 'afternoon', 'evening', 'flexible']).optional(),
   frequency: z.enum(['one-time', 'weekly', 'bi-weekly', 'monthly', 'turnover-only']).optional(),
@@ -422,7 +422,7 @@ export function QuoteRequestForm() {
                   name="location"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Area / location (Kumasi)</FormLabel>
+                      <FormLabel>Area / location (Accra)</FormLabel>
                       <FormControl>
                         <Input placeholder="e.g., Asokwa, Ahodwo, Adum…" {...field} />
                       </FormControl>
@@ -671,10 +671,10 @@ export function QuoteRequestForm() {
         <Card className="rounded-2xl lg:sticky lg:top-24">
           <CardHeader>
             <CardTitle className="text-xl">Your quote</CardTitle>
-            <CardDescription>Clear pricing + terms, generated from your answers.</CardDescription>
+            {/* <CardDescription>Clear pricing + terms, generated from your answers.</CardDescription> */}
           </CardHeader>
           <CardContent>
-            <div className="rounded-xl border border-border bg-secondary/10 p-4">
+            {/* <div className="rounded-xl border border-border bg-secondary/10 p-4">
               <div className="flex items-start justify-between gap-4">
                 <div className="min-w-0">
                   <p className="text-xs text-foreground/60">Total</p>
@@ -699,9 +699,9 @@ export function QuoteRequestForm() {
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
 
-            <div className="mt-4 rounded-xl border border-border bg-background p-4">
+            {/* <div className="mt-4 rounded-xl border border-border bg-background p-4">
               <p className="text-sm font-semibold text-primary">Terms & conditions (summary)</p>
               <ul className="mt-3 space-y-2 text-sm text-foreground/70">
                 {quote.terms.map((t) => (
@@ -711,9 +711,9 @@ export function QuoteRequestForm() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </div> */}
 
-            <div className="mt-6">
+            <div className="mt-1">
               <Label className="text-xs text-foreground/60">WhatsApp message preview</Label>
             </div>
             <div className="mt-2 whitespace-pre-wrap rounded-xl border border-border bg-secondary/10 p-4 text-sm text-foreground/80 leading-relaxed">

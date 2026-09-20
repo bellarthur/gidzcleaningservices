@@ -121,7 +121,7 @@ export function QuoteModal({ open, onOpenChange }: QuoteModalProps) {
             <Label htmlFor="location">Location *</Label>
             <Input
               id="location"
-              placeholder="Your area in Kumasi"
+              placeholder="Your area in Accra"
               value={formData.location}
               onChange={(e) => handleFormChange('location', e.target.value)}
             />

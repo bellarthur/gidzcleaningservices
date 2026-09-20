@@ -296,7 +296,7 @@ function CategoryTabs({
   return (
     <div className="relative">
       {/* Fade edges like Airbnb horizontal category strip */}
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-background to-transparent" />
+      <div className="pointer-events-none absolute inset-y-2 left-0 w-10 bg-gradient-to-r from-background to-transparent" />
       <div className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-background to-transparent" />
 
       <div className="flex gap-2 overflow-x-auto pb-2 pt-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
@@ -582,11 +582,11 @@ export function ServicesAirbnbSection() {
         <motion.div {...fadeInUp} className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-2xl">
             <h2 className="text-3xl font-semibold text-[#E5E7EA] sm:text-4xl lg:text-5xl">
-              Services tailored to your space
+              Our Services
             </h2>
-            <p className="mt-3 text-base text-[#A7ADB7] sm:text-lg">
+            {/* <p className="mt-3 text-base text-[#A7ADB7] sm:text-lg">
               Pick a category, open any service, and see the checklist, ideal fit, and next steps.
-            </p>
+            </p> */}
           </div>
 
           {/* <div className="flex items-center gap-2">
@@ -599,7 +599,7 @@ export function ServicesAirbnbSection() {
           </div> */}
         </motion.div>
 
-        <div className="mt-8">
+        <div className="mt-4">
           <CategoryTabs value={active} onChange={setActive} />
         </div>
 

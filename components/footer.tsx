@@ -25,7 +25,7 @@ export function Footer() {
               </Link>
             </div>
             <p className="text-sm text-[#A7ADB7]">
-              Premium cleaning for homes and short-stays in Kumasi.
+              Premium cleaning for homes and short-stays in Accra.
             </p>
           </div>
 
@@ -105,15 +105,15 @@ export function Footer() {
             <ul className="space-y-2 text-sm text-[#A7ADB7]">
               <li>
                 <a
-                  href="tel:+233595236285"
+                  href="tel:+233594636671"
                   className="hover:text-accent transition-colors"
                 >
-                  059 523 6285
+                  059 463 6671
                 </a>
               </li>
               <li>
                 <a
-                  href="https://wa.me/233595236285"
+                  href="https://wa.me/233594636671"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-accent transition-colors"
@@ -122,9 +122,9 @@ export function Footer() {
                 </a>
               </li>
               <li className="text-[#A7ADB7]">
-                Estes Park Street
-                <br />
-                Kumasi
+                {/* Estes Park Street
+                <br /> */}
+                Accra
               </li>
             </ul>
           </div>
@@ -137,7 +137,7 @@ export function Footer() {
               © {currentYear} Gidz Cleaning Services. All rights reserved.
             </p>
             <p className="text-sm text-[#A7ADB7]">
-              Premium cleaning for Kumasi homes and short-stays.
+              Premium cleaning for Accra homes and short-stays.
             </p>
           </div>
         </div>

@@ -64,13 +64,13 @@ export function ParallaxHero({
         </motion.div>
 
         {/* Premium overlays */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#08090B]/40 via-[#08090B]/62 to-[#08090B]/92" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#08090B]/70 via-[#08090B]/22 to-[#08090B]/72" />
         <div className="absolute inset-0 bg-[radial-gradient(1200px_circle_at_20%_15%,rgba(229,231,234,0.16),transparent_55%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(900px_circle_at_72%_34%,rgba(0,143,245,0.22),transparent_60%)]" />
         <div className="absolute inset-0 backdrop-blur-[1px]" />
 
         {/* Subtle grain (premium texture) */}
-        <div className="pointer-events-none absolute inset-0 opacity-[0.06] mix-blend-overlay [background-image:url('/hulki-okan-tabak-x3kQTL7yw30-unsplash.jpg')]" />
+        {/* <div className="pointer-events-none absolute inset-0 opacity-[0.06] mix-blend-overlay [background-image:url('/hulki-okan-tabak-x3kQTL7yw30-unsplash.jpg')]" /> */}
       </div>
 
       {/* Content */}
@@ -86,11 +86,11 @@ export function ParallaxHero({
             >
               <div className="inline-flex items-center gap-2 rounded border border-accent/35 bg-[#111318]/70 px-3 py-1.5 text-xs text-[#E5E7EA] shadow-[0_0_20px_rgba(0,143,245,0.18)] backdrop-blur sm:text-sm">
                 <span className="h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_10px_rgba(0,143,245,0.9)]" />
-                Kumasi • Premium Cleaning
+                Accra • Premium Cleaning
               </div>
 
               <div className="text-xs text-[#C7C9CC] sm:text-sm">
-                Estes Park Street, Kumasi
+                Accra
               </div>
             </motion.div>
 
@@ -102,7 +102,7 @@ export function ParallaxHero({
                   transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] as const, delay: 0.05 }}
                   className="text-balance text-4xl text-center sm:text-5xl lg:text-6xl font-semibold leading-tight text-[#F5F7FA]"
                 >
-                  Cleaning Service <span className='text-lg block font-medium'>for Homes & Short-Stays in Kumasi.</span>
+                  Cleaning Service <span className='text-lg block font-medium'>for Homes & Short-Stays in Accra.</span>
                 </motion.h1>
 
                 <motion.p
@@ -175,26 +175,6 @@ export function ParallaxHero({
           </div>
         </div>
       </div>
-
-      {/* Scroll cue */}
-      <motion.div
-        initial={reduceMotion ? { opacity: 1 } : { opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 0.5 }}
-        className="pointer-events-none absolute bottom-3 left-1/2 -translate-x-1/2"
-        aria-hidden="true"
-      >
-        <div className="flex flex-col items-center gap-2 text-[#C7C9CC]/70">
-          {/* <p className="text-xs font-medium tracking-wide">Scroll</p> */}
-          <div className="h-10 w-6 rounded-full border border-[#C7C9CC]/30 bg-[#111318]/50 p-1 backdrop-blur">
-            <motion.div
-              className="h-2 w-1.5 rounded-full bg-accent mx-auto shadow-[0_0_10px_rgba(0,143,245,0.8)]"
-              animate={reduceMotion ? undefined : { y: [0, 18, 0] }}
-              transition={reduceMotion ? undefined : { duration: 1.8, repeat: Infinity, ease: [0.4, 0, 0.2, 1] as const }}
-            />
-          </div>
-        </div>
-      </motion.div>
     </section>
   )
 }
