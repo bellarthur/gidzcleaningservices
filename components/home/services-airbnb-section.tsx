@@ -384,7 +384,7 @@ function CategoryTabs({
   return (
     <div className="relative">
       {/* Fade edges like Airbnb horizontal category strip */}
-      <div className="pointer-events-none absolute inset-y-4 left-0 w-10 bg-gradient-to-r from-background to-transparent" />
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-background to-transparent" />
       <div className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-background to-transparent" />
 
       <div className="flex gap-2 overflow-x-auto pb-2 pt-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">

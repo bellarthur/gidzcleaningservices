@@ -10,7 +10,7 @@ import { Hero } from '@/components/hero'
 import { Section } from '@/components/section'
 import { motion } from 'framer-motion'
 import { useToast } from '@/hooks/use-toast'
-import { Phone, Mail, MapPin, Clock } from 'lucide-react'
+import { Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -65,7 +65,7 @@ export default function ContactPage() {
 
       {/* CONTACT INFO CARDS */}
       <Section className="bg-secondary/20">
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 max-w-5xl mx-auto">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-5 max-w-6xl mx-auto">
           <motion.a
             {...fadeInUp}
             href="tel:+233594636671"
@@ -87,11 +87,24 @@ export default function ContactPage() {
             className="rounded-xl border border-border bg-card p-6 hover:shadow-lg transition-shadow"
           >
             <div className="mb-4 inline-block rounded-lg bg-accent/10 p-3">
-              <Mail className="h-6 w-6 text-accent" />
+              <MessageCircle className="h-6 w-6 text-accent" />
             </div>
             <h3 className="font-semibold text-primary mb-2">WhatsApp</h3>
             <p className="text-sm text-foreground/70">Chat instantly</p>
             <p className="text-xs text-foreground/50 mt-2">Fast replies guaranteed</p>
+          </motion.a>
+
+          <motion.a
+            {...fadeInUp}
+            href="mailto:gidzcleaningservices@gmail.com"
+            className="rounded border border-border bg-card p-6 hover:border-accent/50 hover:shadow-[0_0_24px_rgba(0,143,245,0.12)] transition-all"
+          >
+            <div className="mb-4 inline-block rounded bg-accent/10 p-3">
+              <Mail className="h-6 w-6 text-accent" />
+            </div>
+            <h3 className="font-semibold text-primary mb-2">Email Us</h3>
+            <p className="break-words text-sm text-foreground/70">gidzcleaningservices@gmail.com</p>
+            <p className="text-xs text-foreground/50 mt-2">For bookings and support</p>
           </motion.a>
 
           <motion.div {...fadeInUp} className="rounded-xl border border-border bg-card p-6">

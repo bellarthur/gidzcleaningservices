@@ -96,6 +96,14 @@ export function Footer() {
                   Get a Quote
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/privacy"
+                  className="hover:text-accent transition-colors"
+                >
+                  Privacy & Terms
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -121,6 +129,14 @@ export function Footer() {
                   WhatsApp
                 </a>
               </li>
+              <li>
+                <a
+                  href="mailto:gidzcleaningservices@gmail.com"
+                  className="break-words hover:text-accent transition-colors"
+                >
+                  gidzcleaningservices@gmail.com
+                </a>
+              </li>
               <li className="text-[#A7ADB7]">
                 {/* Estes Park Street
                 <br /> */}
@@ -131,24 +147,34 @@ export function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="mt-12">
-          <div className="flex flex-col md:flex-row justify-center items-center gap-4">
-                  <div className="pt-6 border-t w-full border-white/10 flex flex-col justify-between items-center text-center gap-4">
+        <div className="mt-12 border-t border-white/10 pt-6 text-center">
           <p className="text-sm text-white/60">
-            www.gidzcleaningservices.com
+            © {currentYear} Gidz Cleaning Services. All rights reserved.
           </p>
-          <div className="flex flex-col items-center gap-1">
-            <p className="font-semibold">Powered by:</p>
-            <p className="text-sm text-white/60">Business Tech Support | <span><a
-                  href="tel:+233592771234"
-                  className="hover:text-white transition"
-                >
-                  +233 59 277 1234
-                </a></span></p>
-          </div>
         </div>
+        {/* <div className="mt-12">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-4">
+            <div className="pt-6 border-t w-full border-white/10 flex flex-col justify-between items-center text-center gap-4">
+              <p className="text-sm text-white/60">
+                www.gidzcleaningservices.com
+              </p>
+              <div className="flex flex-col items-center gap-1">
+                <p className="font-semibold">Powered by:</p>
+                <p className="text-sm text-white/60">
+                  Business Tech Support |{" "}
+                  <span>
+                    <a
+                      href="tel:+233592771234"
+                      className="hover:text-white transition"
+                    >
+                      +233 59 277 1234
+                    </a>
+                  </span>
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </footer>
   );
