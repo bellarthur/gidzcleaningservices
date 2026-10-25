@@ -151,7 +151,7 @@ export function ParallaxHero({
                   transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] as const, delay: 0.2 }}
                   className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center"
                 >
-                  {onQuoteClick ? (
+                  {/* {onQuoteClick ? (
                     <Button
                       size="lg"
                       onClick={onQuoteClick}
@@ -159,16 +159,16 @@ export function ParallaxHero({
                     >
                       Request a Quote
                     </Button>
-                  ) : (
-                    <Link href="/quote" className="w-full sm:w-auto">
+                  ) : ( */}
+                    <Link href="/contact" className="w-full sm:w-auto">
                       <Button
                         size="lg"
                         className="w-full sm:w-auto h-12 rounded border border-accent/50 bg-accent px-6 text-accent-foreground shadow-[0_0_32px_rgba(0,143,245,0.38)] hover:bg-[#0057B8]"
                       >
-                        Request a Quote
+                        Contact us
                       </Button>
                     </Link>
-                  )}
+                  {/* )} */}
                 </motion.div>
               </div>
             </div>

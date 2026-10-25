@@ -60,7 +60,7 @@ export default function ContactPage() {
       {/* HERO */}
       <Hero
         headline="Get in Touch"
-        subheading="Have questions? Want to schedule a cleaning? We're here to help. Reach out via phone, WhatsApp, or the form below."
+        subheading="Have questions? Want to schedule a cleaning? We're here to help. Reach out via phone, WhatsApp, or visit our location."
       />
 
       {/* CONTACT INFO CARDS */}
@@ -113,7 +113,7 @@ export default function ContactPage() {
             </div>
             <h3 className="font-semibold text-primary mb-2">Address</h3>
             {/* <p className="text-sm text-foreground/70">Estes Park Street</p> */}
-            <p className="text-xs text-foreground/50 mt-2">Accra</p>
+            <p className="text-xs text-foreground/50 mt-2">Little roses, Ashaley Botwe, Accra</p>
           </motion.div>
 
           <motion.div {...fadeInUp} className="rounded-xl border border-border bg-card p-6">
@@ -141,107 +141,6 @@ export default function ContactPage() {
             title="Gidz Cleaning Services location"
           />
         </motion.div>
-      </Section>
-
-      {/* CONTACT FORM & TEXT */}
-      <Section>
-        <div className="grid gap-12 lg:grid-cols-2 max-w-5xl mx-auto">
-          {/* Form */}
-          <motion.div {...fadeInUp} className="rounded-2xl border border-border bg-card p-8">
-            <h2 className="text-2xl font-bold text-primary mb-6">Send us a Message</h2>
-            <div className="space-y-4">
-              <div>
-                <Label htmlFor="name" className="font-semibold">
-                  Name *
-                </Label>
-                <Input
-                  id="name"
-                  placeholder="Your full name"
-                  value={formData.name}
-                  onChange={(e) => handleChange('name', e.target.value)}
-                  className="mt-2"
-                />
-              </div>
-
-              <div>
-                <Label htmlFor="email" className="font-semibold">
-                  Email
-                </Label>
-                <Input
-                  id="email"
-                  type="email"
-                  placeholder="your@email.com"
-                  value={formData.email}
-                  onChange={(e) => handleChange('email', e.target.value)}
-                  className="mt-2"
-                />
-              </div>
-
-              <div>
-                <Label htmlFor="phone" className="font-semibold">
-                  Phone/WhatsApp *
-                </Label>
-                <Input
-                  id="phone"
-                  placeholder="059 123 4567"
-                  value={formData.phone}
-                  onChange={(e) => handleChange('phone', e.target.value)}
-                  className="mt-2"
-                />
-              </div>
-
-              <div>
-                <Label htmlFor="message" className="font-semibold">
-                  Message *
-                </Label>
-                <Textarea
-                  id="message"
-                  placeholder="Tell us what you need..."
-                  value={formData.message}
-                  onChange={(e) => handleChange('message', e.target.value)}
-                  className="mt-2 min-h-32"
-                />
-              </div>
-
-              <Button onClick={handleSubmit} size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
-                Send Message
-              </Button>
-            </div>
-          </motion.div>
-
-          {/* Info Text */}
-          <motion.div {...fadeInUp} className="space-y-6">
-            <div>
-              <h3 className="text-2xl font-bold text-primary mb-3">Quick Response</h3>
-              <p className="text-foreground/70 leading-relaxed">
-                We check messages constantly and aim to respond within 24 hours. For urgent matters, WhatsApp is the fastest way to reach us.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-bold text-primary mb-3">Service Area</h3>
-              <p className="text-foreground/70 leading-relaxed">
-                We currently serve Accra and nearby areas. Contact us to confirm your location and discuss special arrangements if needed.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-bold text-primary mb-3">What to Include</h3>
-              <ul className="space-y-2 text-foreground/70">
-                <li>• Your location in Accra</li>
-                <li>• Type of property (home, apartment, hotel, etc.)</li>
-                <li>• Preferred service and frequency</li>
-                <li>• Any special requests or questions</li>
-              </ul>
-            </div>
-
-            <Link href="/quote">
-              <Button size="lg" variant="outline" className="w-full bg-transparent">
-                Quick Quote Instead?
-              </Button>
-            </Link>
-          </motion.div>
-        </div>
       </Section>
 
       {/* FAQ */}

@@ -43,7 +43,7 @@ const QuoteSchema = z.object({
   bedrooms: z.coerce.number().int().min(0).max(20),
   bathrooms: z.coerce.number().int().min(0).max(20),
 
-  location: z.string().min(2, 'Please enter your area/location in Accra.'),
+  location: z.string().min(2, 'Please enter your area/location.'),
   preferredDate: z.string().optional(),
   timeWindow: z.enum(['morning', 'afternoon', 'evening', 'flexible']).optional(),
   frequency: z.enum(['one-time', 'weekly', 'bi-weekly', 'monthly', 'turnover-only']).optional(),
@@ -273,13 +273,13 @@ export function QuoteRequestForm() {
           <CardHeader>
             <CardTitle className="text-2xl sm:text-3xl">Request a Quote</CardTitle>
             <CardDescription>
-              Fastest response is on WhatsApp. Fill this form once—then send your request as a WhatsApp message.
+              Fastest response is on WhatsApp.
             </CardDescription>
           </CardHeader>
           <CardContent>
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                <div className="grid gap-4 sm:grid-cols-2">
+                {/* <div className="grid gap-4 sm:grid-cols-2">
                   <FormField
                     control={form.control}
                     name="fullName"
@@ -307,9 +307,9 @@ export function QuoteRequestForm() {
                       </FormItem>
                     )}
                   />
-                </div>
+                </div> */}
 
-                <div className="grid gap-4 sm:grid-cols-2">
+                {/* <div className="grid gap-4 sm:grid-cols-2">
                   <FormField
                     control={form.control}
                     name="serviceType"
@@ -385,9 +385,9 @@ export function QuoteRequestForm() {
                       </FormItem>
                     )}
                   />
-                </div>
+                </div> */}
 
-                <div className="grid gap-4 sm:grid-cols-2">
+                {/* <div className="grid gap-4 sm:grid-cols-2">
                   <FormField
                     control={form.control}
                     name="bedrooms"
@@ -415,23 +415,23 @@ export function QuoteRequestForm() {
                       </FormItem>
                     )}
                   />
-                </div>
+                </div> */}
 
-                <FormField
+                {/* <FormField
                   control={form.control}
                   name="location"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Area / location (Accra)</FormLabel>
+                      <FormLabel>Area / location</FormLabel>
                       <FormControl>
                         <Input placeholder="e.g., Asokwa, Ahodwo, Adum…" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
-                />
+                /> */}
 
-                <div className="grid gap-4 sm:grid-cols-3">
+                {/* <div className="grid gap-4 sm:grid-cols-3">
                   <FormField
                     control={form.control}
                     name="preferredDate"
@@ -494,9 +494,9 @@ export function QuoteRequestForm() {
                       </FormItem>
                     )}
                   />
-                </div>
+                </div> */}
 
-                <div className="rounded-2xl border border-border bg-secondary/10 p-4">
+                {/* <div className="rounded-2xl border border-border bg-secondary/10 p-4">
                   <p className="text-sm font-semibold text-primary mb-3 flex items-center gap-2">
                     <Sparkles className="h-4 w-4 text-accent" /> Add-ons (optional)
                   </p>
@@ -558,8 +558,8 @@ export function QuoteRequestForm() {
                       )}
                     />
                   </div>
-                </div>
-
+                </div> */}
+{/* 
                 <FormField
                   control={form.control}
                   name="notes"
@@ -576,9 +576,9 @@ export function QuoteRequestForm() {
                       <FormMessage />
                     </FormItem>
                   )}
-                />
+                /> */}
 
-                <div className="rounded-2xl border border-border bg-background p-4">
+                {/* <div className="rounded-2xl border border-border bg-background p-4">
                   <p className="text-sm font-semibold text-primary flex items-center gap-2">
                     <CalendarClock className="h-4 w-4 text-accent" /> How it works (quick)
                   </p>
@@ -593,9 +593,9 @@ export function QuoteRequestForm() {
                   <p className="mt-3 text-xs text-foreground/60">
                     Your quote is generated on this page. Sending the WhatsApp message confirms your request at this quote.
                   </p>
-                </div>
+                </div> */}
 
-                <FormField
+                {/* <FormField
                   control={form.control}
                   name="sendViaWhatsApp"
                   render={({ field }) => (
@@ -612,9 +612,9 @@ export function QuoteRequestForm() {
                       </div>
                     </FormItem>
                   )}
-                />
+                /> */}
 
-                <FormField
+                {/* <FormField
                   control={form.control}
                   name="confirmCommitment"
                   render={({ field }) => (
@@ -631,20 +631,26 @@ export function QuoteRequestForm() {
                       </div>
                     </FormItem>
                   )}
-                />
+                /> */}
 
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <Button type="submit" size="lg" className="rounded-xl bg-accent hover:bg-accent/90 text-accent-foreground">
+                  <Button type="button" size="lg" className="rounded-xl bg-accent hover:bg-accent/90 text-accent-foreground">
                     <MessageCircle className="mr-2 h-4 w-4" />
-                    Send quote via WhatsApp
+                     <a
+                    href={buildWhatsAppUrl(WHATSAPP_NUMBER, 'Hi Gidz Cleaning Services, I’d like to request a cleaning quote.')}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Open WhatsApp chat
+                  </a>
                   </Button>
-                  <Button type="button" variant="outline" size="lg" className="rounded-xl" onClick={copyMessage}>
+                  {/* <Button type="button" variant="outline" size="lg" className="rounded-xl" onClick={copyMessage}>
                     <Clipboard className="mr-2 h-4 w-4" />
                     Copy message
-                  </Button>
+                  </Button> */}
                 </div>
 
-                <div className="text-xs text-foreground/60">
+                {/* <div className="text-xs text-foreground/60">
                   Prefer to message immediately?{' '}
                   <a
                     className="underline underline-offset-4"
@@ -655,7 +661,7 @@ export function QuoteRequestForm() {
                     Open WhatsApp chat
                   </a>
                   .
-                </div>
+                </div> */}
               </form>
             </Form>
           </CardContent>
@@ -670,7 +676,7 @@ export function QuoteRequestForm() {
       >
         <Card className="rounded-2xl lg:sticky lg:top-24">
           <CardHeader>
-            <CardTitle className="text-xl">Your quote</CardTitle>
+            <CardTitle className="text-xl sr-only">Your quote</CardTitle>
             {/* <CardDescription>Clear pricing + terms, generated from your answers.</CardDescription> */}
           </CardHeader>
           <CardContent>
@@ -713,19 +719,19 @@ export function QuoteRequestForm() {
               </ul>
             </div> */}
 
-            <div className="mt-1">
+            {/* <div className="mt-1">
               <Label className="text-xs text-foreground/60">WhatsApp message preview</Label>
             </div>
             <div className="mt-2 whitespace-pre-wrap rounded-xl border border-border bg-secondary/10 p-4 text-sm text-foreground/80 leading-relaxed">
               {messagePreview}
-            </div>
+            </div> */}
 
-            <div className="mt-4 rounded-xl border border-border bg-background p-4">
+            <div className="rounded-xl border border-border bg-background p-4">
               <p className="text-sm font-semibold text-primary">What happens next</p>
               <ul className="mt-3 space-y-2 text-sm text-foreground/70">
                 <li className="flex gap-2">
                   <span className="mt-1 h-1.5 w-1.5 rounded-full bg-accent/80" />
-                  <span>You send the WhatsApp message (this confirms the quote).</span>
+                  <span>You send the WhatsApp message.</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="mt-1 h-1.5 w-1.5 rounded-full bg-accent/80" />
