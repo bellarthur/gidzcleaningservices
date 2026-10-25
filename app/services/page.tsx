@@ -20,7 +20,7 @@ export default function ServicesPage() {
       {/* HERO */}
       <Hero
         headline="Our Complete Service Menu"
-        subheading="From weekly maintenance to guest-ready turnover, we offer premium cleaning tailored to your needs."
+        subheading="From homes and laundry to offices, short-stays, event centers, warehouses, and specialized deep cleaning, every service is tailored to your space and schedule."
       />
 
       {/* FOR HOMES */}
@@ -101,7 +101,7 @@ export default function ServicesPage() {
           />
           <ServiceCard
             title="Commercial Space Cleaning"
-            description="Reliable cleaning for customer-facing spaces such as shops, salons, clinics, studios, and showrooms."
+            description="Reliable cleaning for customer-facing spaces such as shops, salons, clinics, studios, restaurants, schools, and hospitals."
           />
           <ServiceCard
             title="Event Center Cleaning"
@@ -109,7 +109,7 @@ export default function ServicesPage() {
           />
           <ServiceCard
             title="Warehouse Cleaning"
-            description="Routine cleaning for accessible warehouse floors, loading areas, staff facilities, and operational spaces."
+            description="Scheduled cleaning for accessible warehouse floors, loading areas, industrial spaces, staff facilities, and operational areas."
           />
         </div>
         <p className="text-center text-foreground/70 mb-8">

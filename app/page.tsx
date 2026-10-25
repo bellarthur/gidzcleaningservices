@@ -8,9 +8,9 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground">
       {/* PARALLAX HERO SECTION */}
       <ParallaxHero
-        headline="Cleaning Service for Homes & Short-Stays in Accra."
+        headline="Cleaning Service for Homes & Commercial Spaces in Accra."
         subheading="Gidz Cleaning Services provides reliable and professional cleaning solutions for homes, offices, apartments, Airbnb properties and commercial spaces in Accra, Ghana. We focus on quality, convenience and customer satisfaction."
-        backgroundImage="/woman-is-holding-cleaning-product-gloves-rags-basin-white-wall.jpg"
+        backgroundImage="/gidz-cleaner-woman.jpeg"
       />
 
       {/* ✅ SERVICES SECTION (Airbnb-inspired category browsing UI + modal details) */}

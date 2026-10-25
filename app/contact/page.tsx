@@ -127,6 +127,22 @@ export default function ContactPage() {
         </div>
       </Section>
 
+      {/* LOCATION */}
+      <Section>
+        <h2 className="text-3xl font-bold text-primary mb-8 text-center">Find Us in Accra</h2>
+        <motion.div {...fadeInUp} className="mx-auto aspect-[16/10] max-w-5xl overflow-hidden rounded-lg border border-border bg-card">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4978.248891530468!2d-0.12917722411696606!3d5.685331532333789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9bc1b6a9461d%3A0xf0caf21e64617189!2sGidz%20Cleaning%20Services!5e1!3m2!1sen!2sgh!4v1792963783537!5m2!1sen!2sgh"
+            className="h-full w-full"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="strict-origin-when-cross-origin"
+            title="Gidz Cleaning Services location"
+          />
+        </motion.div>
+      </Section>
+
       {/* CONTACT FORM & TEXT */}
       <Section>
         <div className="grid gap-12 lg:grid-cols-2 max-w-5xl mx-auto">

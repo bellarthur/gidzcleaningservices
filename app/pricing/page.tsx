@@ -5,13 +5,131 @@ import { Button } from '@/components/ui/button'
 import { Hero } from '@/components/hero'
 import { Section } from '@/components/section'
 import { motion } from 'framer-motion'
-import { Check } from 'lucide-react'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
   whileInView: { opacity: 1, y: 0 },
   transition: { duration: 0.6 },
   viewport: { once: true },
+}
+
+const PRICE_TABLES = [
+  {
+    title: 'Cleaning Services',
+    rows: [
+      ['Small Bedroom Cleaning', 'GH₵ 300'],
+      ['Standard Bedroom Cleaning', 'GH₵ 400'],
+      ['Large Bedroom Cleaning', 'GH₵ 500'],
+      ['Executive Bedroom Cleaning', 'GH₵ 700'],
+      ['Single Room (Self-Contained)', 'GH₵ 500 - 800'],
+      ['Studio Apartment', 'GH₵ 700 - 1,000'],
+      ['1-Bedroom Apartment', 'GH₵ 900 - 1,300'],
+      ['2-Bedroom Apartment', 'GH₵ 1,200 - 1,800'],
+      ['3-Bedroom Apartment', 'GH₵ 1,800 - 2,500'],
+      ['4-Bedroom Apartment', 'GH₵ 2,500 - 3,500'],
+      ['5-Bedroom Luxury House', 'GH₵ 3,500 - 5,000'],
+      ['Mansion / Large Property', 'Quotation Required'],
+    ],
+  },
+  {
+    title: 'Laundry Services',
+    rows: [
+      ['Regular Wash & Fold (per kg)', 'GH₵ 25'],
+      ['Wash, Dry & Iron (per kg)', 'GH₵ 35'],
+      ['Premium Ironing Only (per kg)', 'GH₵ 30'],
+      ['Bedsheets (Single)', 'GH₵ 40'],
+      ['Bedsheets (Double)', 'GH₵ 60'],
+      ['Duvet Cover (Single)', 'GH₵ 60'],
+      ['Duvet Cover (Double)', 'GH₵ 80'],
+      ['Curtains (per kg)', 'GH₵ 80'],
+      ['Blankets (Single)', 'GH₵ 50'],
+      ['Blankets (Double)', 'GH₵ 60'],
+      ['Pillow Case (each)', 'GH₵ 100'],
+      ['Table Cloth (per piece)', 'GH₵ 10'],
+      ['Other Laundry Items', 'GH₵ 40 - 100'],
+    ],
+  },
+  {
+    title: 'Airbnb & Short-Stay Cleaning',
+    rows: [
+      ['Studio Airbnb', 'GH₵ 400 - 600'],
+      ['1-Bedroom Airbnb', 'GH₵ 500 - 800'],
+      ['2-Bedroom Airbnb', 'GH₵ 800 - 1,200'],
+      ['3-Bedroom Airbnb', 'GH₵ 1,200 - 1,700'],
+      ['4-Bedroom Airbnb', 'GH₵ 1,700 - 2,300'],
+      ['Luxury Airbnb / Villa', 'Quotation Required'],
+      ['Guest Checkout Cleaning', 'From GH₵ 350'],
+      ['Bed Linen Changing', 'From GH₵ 50'],
+      ['Airbnb Deep Cleaning', 'From GH₵ 800'],
+    ],
+  },
+  {
+    title: 'Office & Commercial Cleaning',
+    rows: [
+      ['Small Office Cleaning', 'GH₵ 500 - 800'],
+      ['Medium Office Cleaning', 'GH₵ 800 - 1,500'],
+      ['Large Office Cleaning', 'GH₵ 1,500 - 3,000'],
+      ['Executive Office Cleaning', 'GH₵ 400 - 700'],
+      ['Conference / Meeting Room', 'GH₵ 400 - 800'],
+      ['Reception & Waiting Area', 'GH₵ 400 - 700'],
+      ['Retail Shop / Boutique', 'GH₵ 500 - 1,200'],
+      ['Salon / Beauty Studio', 'GH₵ 600 - 1,500'],
+      ['Spa & Wellness Centre', 'GH₵ 700 - 1,800'],
+      ['Restaurant / Café', 'GH₵ 800 - 2,000'],
+      ['School / Educational Facility', 'Quotation Required'],
+      ['Hospital / Medical Facility', 'Quotation Required'],
+      ['Warehouse / Industrial Space', 'Quotation Required'],
+    ],
+  },
+  {
+    title: 'Upholstery & Furniture Cleaning',
+    rows: [
+      ['Single-Seater Sofa', 'GH₵ 150 - 250'],
+      ['Two-Seater Sofa', 'GH₵ 250 - 400'],
+      ['Three-Seater Sofa', 'GH₵ 350 - 550'],
+      ['L-Shaped Sofa', 'GH₵ 500 - 800'],
+      ['Dining Chair', 'GH₵ 50 - 100'],
+      ['Single Mattress', 'GH₵ 250 - 400'],
+      ['Double Mattress', 'GH₵ 350 - 550'],
+      ['King-Size Mattress', 'GH₵ 450 - 700'],
+      ['Carpet Cleaning', 'From GH₵ 200'],
+      ['Rug Cleaning', 'From GH₵ 150'],
+    ],
+  },
+  {
+    title: 'Deep Cleaning & Specialized Services',
+    rows: [
+      ['Kitchen Deep Cleaning', 'GH₵ 400 - 800'],
+      ['Bathroom Deep Cleaning', 'GH₵ 300 - 600'],
+      ['Toilet Cleaning & Sanitization', 'GH₵ 200 - 400'],
+      ['Refrigerator Cleaning', 'GH₵ 150 - 300'],
+      ['Oven Cleaning', 'GH₵ 150 - 300'],
+      ['Interior Window Cleaning', 'From GH₵ 200'],
+      ['Balcony / Terrace Cleaning', 'GH₵ 300 - 600'],
+      ['Post-Construction Cleaning', 'From GH₵ 1,500'],
+      ['Move-In Cleaning', 'From GH₵ 800'],
+      ['Move-Out Cleaning', 'From GH₵ 800'],
+      ['After-Party / Event Cleaning', 'From GH₵ 700'],
+      ['Compound / Outdoor Cleaning', 'From GH₵ 500'],
+      ['Water Tank Cleaning', 'Quotation Required'],
+    ],
+  },
+]
+
+function PriceTable({ title, rows }: (typeof PRICE_TABLES)[number]) {
+  return (
+    <motion.div {...fadeInUp} className="overflow-hidden rounded-lg border border-border bg-card">
+      <h3 className="bg-primary px-5 py-4 text-xl font-bold text-primary-foreground sm:text-2xl">{title}</h3>
+      <div className="divide-y divide-border">
+        {rows.map(([service, price]) => (
+          <div key={service} className="grid grid-cols-[minmax(0,1fr)_auto] gap-4 px-4 py-3.5 sm:px-5">
+            <span className="text-sm text-foreground/80 sm:text-base">{service}</span>
+            <span className="text-right text-sm font-bold text-accent sm:text-base">{price}</span>
+          </div>
+        ))}
+      </div>
+    </motion.div>
+  )
 }
 
 export default function PricingPage() {
@@ -26,195 +144,21 @@ export default function PricingPage() {
       {/* PRICING NOTE */}
       <Section className="bg-secondary/20">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="text-lg text-foreground/70 mb-6">
-            <strong>Every home is unique.</strong> Pricing depends on size, frequency, and specific services. Below are our standard starting ranges to help guide you.
+          <p className="text-lg text-foreground/70 mb-4">
+            Below are Gidz Cleaning Services' current published rates in Ghana cedis. Final pricing may vary by property size, condition, access, and scope.
           </p>
-          <p className="text-lg text-foreground/70">
-            For a personalized quote, fill out our quick form or message us on WhatsApp.
+          <p className="text-sm text-foreground/60">
+            Transportation charges apply for home bookings. Monthly office cleaning contracts are available.
           </p>
         </div>
       </Section>
 
-      {/* RESIDENTIAL PRICING */}
+      {/* UPDATED PRICE LIST */}
       <Section>
-        <h2 className="text-4xl font-bold text-primary mb-12 text-center">Residential Cleaning Plans</h2>
-
-        <div className="grid gap-6 md:grid-cols-3 max-w-5xl mx-auto mb-12">
-          <motion.div {...fadeInUp} className="rounded-xl border-2 border-border bg-card p-8">
-            <h3 className="text-2xl font-bold text-primary mb-2">One-Time Deep Clean</h3>
-            <p className="text-foreground/70 mb-6 text-sm">Full home refresh</p>
-            <div className="text-3xl font-bold text-accent mb-6">From GHS 250</div>
-            <ul className="space-y-3 mb-8 text-sm">
-              <li className="flex items-start">
-                <Check className="h-5 w-5 text-accent mr-3 flex-shrink-0 mt-0.5" />
-                <span className="text-foreground/80">Complete deep clean</span>
-              </li>
-              <li className="flex items-start">
-                <Check className="h-5 w-5 text-accent mr-3 flex-shrink-0 mt-0.5" />
-                <span className="text-foreground/80">All rooms included</span>
-              </li>
-              <li className="flex items-start">
-                <Check className="h-5 w-5 text-accent mr-3 flex-shrink-0 mt-0.5" />
-                <span className="text-foreground/80">Flexible scheduling</span>
-              </li>
-            </ul>
-            <Link href="/quote">
-              <Button size="lg" variant="outline" className="w-full bg-transparent">
-                Get Quote
-              </Button>
-            </Link>
-          </motion.div>
-
-          <motion.div {...fadeInUp} className="rounded-xl border-2 border-accent bg-card p-8">
-            <div className="inline-block rounded-full bg-accent px-4 py-1 text-sm font-semibold text-accent-foreground mb-4">
-              Most Popular
-            </div>
-            <h3 className="text-2xl font-bold text-primary mb-2">Bi-Weekly</h3>
-            <p className="text-foreground/70 mb-6 text-sm">Recurring maintenance</p>
-            <div className="text-3xl font-bold text-accent mb-6">From GHS 80/visit</div>
-            <ul className="space-y-3 mb-8 text-sm">
-              {/* <li className="flex items-start">
-                <Check className="h-5 w-5 text-accent mr-3 flex-shrink-0 mt-0.5" />
-                <span className="text-foreground/80">10% discount</span>
-              </li> */}
-              <li className="flex items-start">
-                <Check className="h-5 w-5 text-accent mr-3 flex-shrink-0 mt-0.5" />
-                <span className="text-foreground/80">Priority booking</span>
-              </li>
-              <li className="flex items-start">
-                <Check className="h-5 w-5 text-accent mr-3 flex-shrink-0 mt-0.5" />
-                <span className="text-foreground/80">Same team every visit</span>
-              </li>
-            </ul>
-            <Link href="/quote">
-              <Button size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
-                Get Quote
-              </Button>
-            </Link>
-          </motion.div>
-
-          <motion.div {...fadeInUp} className="rounded-xl border-2 border-border bg-card p-8">
-            <h3 className="text-2xl font-bold text-primary mb-2">Weekly</h3>
-            <p className="text-foreground/70 mb-6 text-sm">Maximum consistency</p>
-            <div className="text-3xl font-bold text-accent mb-6">From GHS 70/visit</div>
-            <ul className="space-y-3 mb-8 text-sm">
-            {/* `  <li className="flex items-start">
-                <Check className="h-5 w-5 text-accent mr-3 flex-shrink-0 mt-0.5" />
-                <span className="text-foreground/80">15% discount</span>
-              </li>` */}
-              <li className="flex items-start">
-                <Check className="h-5 w-5 text-accent mr-3 flex-shrink-0 mt-0.5" />
-                <span className="text-foreground/80">Dedicated cleaner</span>
-              </li>
-              <li className="flex items-start">
-                <Check className="h-5 w-5 text-accent mr-3 flex-shrink-0 mt-0.5" />
-                <span className="text-foreground/80">Ultra-consistent quality</span>
-              </li>
-            </ul>
-            <Link href="/quote">
-              <Button size="lg" variant="outline" className="w-full bg-transparent">
-                Get Quote
-              </Button>
-            </Link>
-          </motion.div>
-        </div>
-
-        <div className="max-w-3xl mx-auto">
-          <p className="text-center text-foreground/70 text-sm">
-            * Prices depend on home size, location, and specific service add-ons. The ranges above are for a typical 3-bedroom, 2-bathroom home. Contact us for your personalized quote.
-          </p>
-        </div>
-      </Section>
-
-      {/* SHORT-STAY PRICING */}
-      <Section className="bg-secondary/20">
-        <h2 className="text-4xl font-bold text-primary mb-12 text-center">Turnover & Short-Stay Pricing</h2>
-
-        <div className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto mb-12">
-          <motion.div {...fadeInUp} className="rounded-xl border-2 border-border bg-card p-8">
-            <h3 className="text-2xl font-bold text-primary mb-2">Standard Turnover</h3>
-            <p className="text-foreground/70 mb-6 text-sm">2-3 hours, fully guest-ready</p>
-            <div className="text-3xl font-bold text-accent mb-6">From GHS 120</div>
-            <ul className="space-y-3 mb-8 text-sm">
-              <li className="flex items-start">
-                <Check className="h-5 w-5 text-accent mr-3 flex-shrink-0 mt-0.5" />
-                <span className="text-foreground/80">Full turnover standard</span>
-              </li>
-              <li className="flex items-start">
-                <Check className="h-5 w-5 text-accent mr-3 flex-shrink-0 mt-0.5" />
-                <span className="text-foreground/80">Linen change included</span>
-              </li>
-              <li className="flex items-start">
-                <Check className="h-5 w-5 text-accent mr-3 flex-shrink-0 mt-0.5" />
-                <span className="text-foreground/80">Photo-ready finish</span>
-              </li>
-            </ul>
-            <Link href="/quote">
-              <Button size="lg" variant="outline" className="w-full bg-transparent">
-                Get Quote
-              </Button>
-            </Link>
-          </motion.div>
-
-          <motion.div {...fadeInUp} className="rounded-xl border-2 border-accent bg-card p-8">
-            <div className="inline-block rounded-full bg-accent px-4 py-1 text-sm font-semibold text-accent-foreground mb-4">
-              Express
-            </div>
-            <h3 className="text-2xl font-bold text-primary mb-2">Express Turnover</h3>
-            <p className="text-foreground/70 mb-6 text-sm">1.5 hours, back-to-back ready</p>
-            <div className="text-3xl font-bold text-accent mb-6">From GHS 150</div>
-            <ul className="space-y-3 mb-8 text-sm">
-              <li className="flex items-start">
-                <Check className="h-5 w-5 text-accent mr-3 flex-shrink-0 mt-0.5" />
-                <span className="text-foreground/80">Fast turnaround</span>
-              </li>
-              <li className="flex items-start">
-                <Check className="h-5 w-5 text-accent mr-3 flex-shrink-0 mt-0.5" />
-                <span className="text-foreground/80">Still photo-ready</span>
-              </li>
-              <li className="flex items-start">
-                <Check className="h-5 w-5 text-accent mr-3 flex-shrink-0 mt-0.5" />
-                <span className="text-foreground/80">Premium efficiency</span>
-              </li>
-            </ul>
-            <Link href="/quote">
-              <Button size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
-                Get Quote
-              </Button>
-            </Link>
-          </motion.div>
-        </div>
-
-        {/* <div className="max-w-3xl mx-auto">
-          <p className="text-center text-foreground/70 text-sm">
-            * Recurring turnovers (weekly/bi-weekly) receive 10-20% discounts. Multi-property hosts get custom rates.
-          </p>
-        </div> */}
-      </Section>
-
-      {/* ADD-ONS */}
-      <Section>
-        <h2 className="text-4xl font-bold text-primary mb-12 text-center">Popular Add-Ons</h2>
-
-        <div className="grid gap-4 md:grid-cols-2 max-w-3xl mx-auto">
-          {[
-            { name: 'Interior Windows', price: 'From GHS 25' },
-            { name: 'Laundry Wash & Fold', price: 'From GHS 30/load' },
-            { name: 'Fridge Interior', price: 'From GHS 40' },
-            { name: 'Oven Interior', price: 'From GHS 50' },
-            { name: 'Baseboards & Trim', price: 'From GHS 35' },
-            { name: 'Carpet Spot Treatment', price: 'From GHS 25' },
-            { name: 'Bedding Refresh', price: 'From GHS 20' },
-            { name: 'Host Report + Photos', price: 'From GHS 15' },
-          ].map((addon, idx) => (
-            <motion.div
-              key={idx}
-              {...fadeInUp}
-              className="flex justify-between items-center rounded-lg border border-border bg-card p-4"
-            >
-              <span className="font-medium text-foreground">{addon.name}</span>
-              <span className="text-accent font-semibold">{addon.price}</span>
-            </motion.div>
+        <h2 className="text-4xl font-bold text-primary mb-12 text-center">Current Service Prices</h2>
+        <div className="grid gap-6 lg:grid-cols-2 max-w-6xl mx-auto">
+          {PRICE_TABLES.map((table) => (
+            <PriceTable key={table.title} {...table} />
           ))}
         </div>
       </Section>

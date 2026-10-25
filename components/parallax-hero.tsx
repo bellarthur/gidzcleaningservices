@@ -59,7 +59,7 @@ export function ParallaxHero({
             fill
             priority
             quality={92}
-            className="object-cover object-[center_22%] sm:object-[center_26%] opacity-95"
+            className="object-cover object-[58%_24%] sm:object-[52%_22%] lg:object-[50%_24%] opacity-95"
           />
         </motion.div>
 
